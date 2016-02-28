@@ -1,0 +1,2 @@
+webui   ALL = (root) NOPASSWD: /sbin/shutdown
+webui   ALL = (root) NOPASSWD: /usr/local/bin/all_tor.sh
