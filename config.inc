@@ -1,5 +1,5 @@
 ## for now - orange pi is supported.
-HARDWARE=orangepi
+HARDWARE=orangepipc
 ## Put your hostname here
 HOSTNAME=orangebox
 ## Active user (orangepi default one for orangepi, pi - for raspberry pi)
