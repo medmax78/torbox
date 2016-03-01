@@ -26,6 +26,14 @@ echo "interface=${INTERFACE}" >> /etc/dnsmasq.conf
 echo "dhcp-range=${DHCP_RANGE}" >> /etc/dnsmasq.conf
 echo "address=${HOSTADDR}" >> /etc/dnsmasq.conf
 
+echo "Setting SSID info to the mediatek driver"
+
+if [ -f /etc/Wireless/RT2870AP/RT2870AP.dat ]; then
+  sed -i "s/SSID=orangeBox/SSID=${SSID_NAME}/" /etc/Wireless/RT2870AP/RT2870AP.dat
+  sed -i "s/WPAPSK=not4youreyes/WPAPSK=${SSID_PASSWORD}" /etc/Wireless/RT2870AP/RT2870AP.dat
+fi
+
+
 echo "Installing arm verison of hostapd..."
 echo "Deeecrunching"
 echo "Copying binary..."
