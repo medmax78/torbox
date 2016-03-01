@@ -45,7 +45,12 @@ KERNEL_VERSION=`uname -r`
 
 mkdir /lib/modules/${KERNEL_VERSION}/wifiap
 cp ./hardware/${HARDWARE}/${KERNEL_VERSION}/*.ko /lib/modules/${KERNEL_VERSION}/wifiap
-grep "^[^#;]" ./hardware/${HARDWARE}/${KERNEL_VERSION}/etc/modules >> /etc/modules
+
+echo "8188eu" >>/etc/modules
+echo "rtutil7601Uap" >>/etc/modules
+echo "mt7601Uap" >>/etc/modules
+echo "rtnet7601Uap" >>/etc/modules
+
 
 
 
