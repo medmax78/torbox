@@ -10,4 +10,5 @@ sed -i 's/accept-intercepted-requests\s.*0/accept-intercepted-requests 1/' /etc/
 echo "forward-socks4a / 127.0.0.1:9050 .">>/etc/privoxy/config
 echo "forward          .i2p            127.0.0.1:4444">>/etc/privoxy/config
 echo "forward-socks4a  .onion          127.0.0.1:9050 .">>/etc/privoxy/config
-/etc/init.d/privoxy start
+systemctl enable privoxy
+systemctl start privoxy
