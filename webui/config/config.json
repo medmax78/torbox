@@ -2,6 +2,8 @@
   "strStatusFile": "/run/apmode",
   "strWrapper": "sudo",
   "strCommand": "/usr/local/bin/all_tor.sh",
-  "strReboot": "/sbin/reboot",
-  "strShutdown": "/sbin/shutdown"
+  "strReboot": "/sbin/shutdown -r now",
+  "strShutdown": "/sbin/shutdown -h now",
+  "strTemperature": "/usr/local/bin/cputemp.sh",
+  "strSystemctl": "/bin/systemctl"
 }

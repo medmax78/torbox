@@ -33,7 +33,9 @@ router.get('/reboot', function(req, res, next) {
 router.post('/reboot', function(req, res, next) {
   try 
   {
-    var result = functions.reboot();
+    setInterval(function(){
+       functions.reboot();
+     },10000);
     res.render('xresult', { title: 'Reboot', message: 'Reboot in progress...' });
   }
   catch(e)
@@ -52,7 +54,9 @@ router.get('/shutdown', function(req, res, next) {
 router.post('/shutdown', function(req, res, next) {
   try 
   {
-    var result = functions.shutdown();
+    setInterval(function(){
+       functions.shutdown();
+    },10000);
     res.render('xresult', { title: 'Shutdown', message: 'Shutdown in progress...' });
   }
   catch(e)

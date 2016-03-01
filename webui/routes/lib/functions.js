@@ -104,7 +104,10 @@ this.sysInfo = function()
       interfaces.push(single_interface);  
    });
  });
- 
+
+
+ var execSync = require('child_process').execSync;
+ var temperature = execSync(config.strWrapper+" "+config.strTemperature); 
   
  var system_info = {
    
@@ -116,6 +119,7 @@ this.sysInfo = function()
  arch : os.arch(),
  release: os.release(),
  cpuCount : os.cpus().length,
+ cpuTemp : temperature
   
  };
  
@@ -134,5 +138,12 @@ function isAscii(text)
   return false;
 }
 
+this.i2pAction = function(i2p)
+{
 
+   var execSync = require('child_process').execSync;
+   script = execSync(config.strWrapper+" "+config.strSystemctl+" "+i2p.toLowerCase()+" i2p");
+   return "Command successfully passed to system";
+
+}
     

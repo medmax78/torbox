@@ -10,6 +10,7 @@ var basicAuth = require('basic-auth-connect');
 var routes = require('./routes/index');
 var mode = require('./routes/mode');
 var system = require('./routes/system');
+var i2p = require('./routes/i2p');
 
 var app = express();
 
@@ -30,6 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/mode', mode);
 app.use('/system', system);
+app.use('/i2p', i2p);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
