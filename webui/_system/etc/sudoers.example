@@ -1,4 +1,5 @@
 webui   ALL = (root) NOPASSWD: /sbin/shutdown
 webui   ALL = (root) NOPASSWD: /usr/local/bin/all_tor.sh
+webui   ALL = (root) NOPASSWD: /usr/local/bin/cputemp.sh
 webui   ALL = (root) NOPASSWD: /bin/systemctl
 
