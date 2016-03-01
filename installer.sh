@@ -51,6 +51,11 @@ echo "rtutil7601Uap" >>/etc/modules
 echo "mt7601Uap" >>/etc/modules
 echo "rtnet7601Uap" >>/etc/modules
 
+cp -r ./hardware/${HARDWARE}/${KERNEL_VERSION}/etc/* /etc/
+
+depmod -a
+
+
 
 
 
