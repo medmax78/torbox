@@ -10,7 +10,7 @@ cp ./scripts/etc/udev/rules.d/70-persistent-net.rules /etc/udev/rules.d/70-persi
 echo "Setting wlan0 interface..."
 
 echo "auto wlan0" >>/etc/network/interfaces.d/wlan0
-echo "iface wlan0 inet static"
+echo "iface wlan0 inet static" >>/etc/network/interfaces.d/wlan0
 echo "       address $IP_ADDRESS" >>/etc/network/interfaces.d/wlan0
 echo "       netmask $IP_NETMASK" >>/etc/network/interfaces.d/wlan0
 echo "       network $IP_NETWORK" >>/etc/network/interfaces.d/wlan0
