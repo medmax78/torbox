@@ -22,30 +22,28 @@ else
         echo "Not an OrangePI PC. Skipping fix thermal problems.."
 fi
 
-sleep 10
+
 ##
 echo "Installing tor..."
 ./scripts/install/torinst.sh
-sleep 10
+
 ##
 echo "Installing privoxy..."
 ./scripts/install/privoxyinst.sh
-sleep 10
+
 ##
 echo "Installing Java 8 for ARM..."
 ./scripts/install/java8inst.sh
-sleep 10
-
 
 
 ##
 echo "Installing i2p.."
 ./scripts/install/i2pinst.sh
-sleep 10
+
 ##
 echo "Installing nescessary hardware modules..."
 KERNEL_VERSION=`uname -r`
-sleep 10
+
 mkdir /lib/modules/${KERNEL_VERSION}/wifiap
 cp ./hardware/${HARDWARE}/${KERNEL_VERSION}/wifi/*.ko /lib/modules/${KERNEL_VERSION}/wifiap
 
