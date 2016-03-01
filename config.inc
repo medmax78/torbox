@@ -11,11 +11,11 @@ SSID_PASSWORD=not4youreyes
 ## IP adddress
 IP_ADDRESS=192.168.110.1
 IP_NETMASK=255.255.255.0
-IP_NETWORK=192.168.110.1
+IP_NETWORK=192.168.110.0
 IP_BROADCAST=192.168.110.255
 INTERFACE=wlan0
 DHCP_RANGE="192.168.110.50,192.168.110.150,255.255.255.0,12h"
-HOSTADDR="/my.torbox/192.168.110.1"
+HOSTADDR="/my.torbox/${IP_ADDRESS}"
 
 
 ## below are settings of WEBUI. Don't change them, until you don't know what are you doing
