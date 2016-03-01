@@ -47,6 +47,13 @@ KERNEL_VERSION=`uname -r`
 mkdir /lib/modules/${KERNEL_VERSION}/wifiap
 cp ./hardware/${HARDWARE}/${KERNEL_VERSION}/wifi/*.ko /lib/modules/${KERNEL_VERSION}/wifiap
 
+
+if [ ${HARDWARE} = "orangepipc" ]; then
+        echo "Enabling crypto module"
+        echo "ss" >>/etc/modules
+fi
+
+
 echo "8188eu" >>/etc/modules
 echo "rtutil7601Uap" >>/etc/modules
 echo "mt7601Uap" >>/etc/modules
