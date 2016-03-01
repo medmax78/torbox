@@ -1,9 +1,11 @@
 #!/bin/sh
 
-if [[ $EUID -ne 0 ]]; then
+if [ "$(id -u)" != 0 ]; then
    echo "This script must be run as root" 1>&2
    exit 1
 fi
+
+
 echo "Starting installer..."
 . ./config.inc
 
@@ -13,49 +15,45 @@ chmod a+x ./scripts/usr/local/bin/*
 cp ./scripts/usr/local/bin/* /usr/local/bin/
 
 
-if [ "$HARDWARE" == "orangepipc" ]; then
-	echo "Fixing thermal problems..."
-    
+if [ ${HARDWARE} = "orangepipc" ]; then
+        echo "Fixing thermal problems..."
+        /usr/local/bin/fix-thermal-problems.sh
 else
-	echo "Not an OrangePI PC. Skipping fix thermal problems.."
+        echo "Not an OrangePI PC. Skipping fix thermal problems.."
 fi
 
-
+sleep 10
 ##
 echo "Installing tor..."
 ./scripts/install/torinst.sh
-
+sleep 10
 ##
 echo "Installing privoxy..."
 ./scripts/install/privoxyinst.sh
-
+sleep 10
 ##
 echo "Installing Java 8 for ARM..."
-./scriprs/install/java8inst.sh
+./scripts/install/java8inst.sh
+sleep 10
 
 
 
 ##
 echo "Installing i2p.."
 ./scripts/install/i2pinst.sh
-
+sleep 10
 ##
 echo "Installing nescessary hardware modules..."
 KERNEL_VERSION=`uname -r`
-
+sleep 10
 mkdir /lib/modules/${KERNEL_VERSION}/wifiap
-cp ./hardware/${HARDWARE}/${KERNEL_VERSION}/*.ko /lib/modules/${KERNEL_VERSION}/wifiap
+cp ./hardware/${HARDWARE}/${KERNEL_VERSION}/wifi/*.ko /lib/modules/${KERNEL_VERSION}/wifiap
 
 echo "8188eu" >>/etc/modules
 echo "rtutil7601Uap" >>/etc/modules
 echo "mt7601Uap" >>/etc/modules
 echo "rtnet7601Uap" >>/etc/modules
 
-cp -r ./hardware/${HARDWARE}/${KERNEL_VERSION}/etc/* /etc/
+cp -r ./hardware/${HARDWARE}/${KERNEL_VERSION}/wifi/etc/* /etc/
 
 depmod -a
-
-
-
-
-
