@@ -62,5 +62,4 @@ case $MODE in
 esac
 
 
-firewall_incoming
 
