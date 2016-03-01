@@ -26,6 +26,10 @@ echo "interface=${INTERFACE}" >> /etc/dnsmasq.conf
 echo "dhcp-range=${DHCP_RANGE}" >> /etc/dnsmasq.conf
 echo "address=${HOSTADDR}" >> /etc/dnsmasq.conf
 
+echo "Setting script to start AP..."
+
+ln -s /usr/local/bin/ap.sh /etc/network/if-up.d/ap
+
 echo "Setting SSID info to the mediatek driver"
 
 if [ -f /etc/Wireless/RT2870AP/RT2870AP.dat ]; then
