@@ -55,3 +55,7 @@ echo "rtnet7601Uap" >>/etc/modules
 cp -r ./hardware/${HARDWARE}/${KERNEL_VERSION}/wifi/etc/* /etc/
 
 depmod -a
+
+echo "Setting up network and access point..."
+./scripts/install/setupnet.sh
+
