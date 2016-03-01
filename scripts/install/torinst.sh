@@ -7,7 +7,7 @@
 #apt-get update
 #apt-get -y install tor deb.torproject.org-keyring
 apt-get -y install tor
-systemctl unmask.tor.service
+systemctl unmask tor.service
 systemctl stop tor
 
 echo "Configuring tor..."
