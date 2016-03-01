@@ -1,0 +1,5 @@
+#realtek rename
+ACTION=="add", SUBSYSTEM=="net", ATTR{type}=="1", KERNEL=="wlan*", NAME="wlan0"
+
+#ralink rename
+ACTION=="add", SUBSYSTEM=="net", ATTR{type}=="1", KERNEL=="ra*", NAME="wlan0"
