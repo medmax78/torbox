@@ -11,7 +11,7 @@ SSID_PASSWORD=not4youreyes
 ## IP adddress
 IP_ADDRESS=192.168.110.1
 IP_NETMASK=255.255.255.0
-DHCP-RANGE=192.168.110.50-192.168.110.100
+DHCP-RANGE="192.168.110.50-192.168.110.100"
 
 
 ## below are settings of WEBUI. Don't change them, until you don't know what are you doing
