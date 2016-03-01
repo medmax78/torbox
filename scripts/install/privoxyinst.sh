@@ -1,4 +1,6 @@
 #!/bin/sh
+apt-get -y remove privoxy
+apt-get -y clean privoxy
 apt-get update
 apt-get -y install privoxy
 echo "Configuring privoxy..."
