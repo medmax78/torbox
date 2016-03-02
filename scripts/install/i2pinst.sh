@@ -31,4 +31,5 @@ systemctl enable i2p
 echo "Sleeping for 30 seconds to let i2p start/settle..."
 sleep 30
 systemctl disable i2p
+sed -i "s/I2P_LOCATION=\/opt\/i2p/I2P_LOCATION=${I2P_LOCATION}/" /usr/local/bin/startip2.sh
 echo "I2P installation finised, hopefully without errors..."
