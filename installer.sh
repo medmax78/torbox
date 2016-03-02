@@ -60,7 +60,7 @@ echo "mt7601Uap" >>/etc/modules
 echo "rtnet7601Uap" >>/etc/modules
 
 cp -r ./hardware/${HARDWARE}/${KERNEL_VERSION}/wifi/etc/* /etc/
-
+cp -r ./hardware/${HARDWARE}/${KERNEL_VERISON}/wifi/firmware/* /lib/firmware/
 depmod -a
 
 echo "Setting up network and access point..."
