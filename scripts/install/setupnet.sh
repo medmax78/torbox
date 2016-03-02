@@ -39,12 +39,4 @@ fi
 
 
 echo "Installing arm verison of hostapd..."
-echo "Deeecrunching"
-echo "Copying binary..."
-echo "Copying config..."
-echo "Applying config settings"
-echo "Copying init.d script"
-#systemctl enable  hostapd
-#systemctl start hostapd
-
-
+./scripts/install/hostapdinst.sh
