@@ -39,7 +39,7 @@ sed -i "s/WEBUI_USER=webui/WEBUI_USER=${WEBUI_USER}/" /etc/init.d/webui
 
 
 systemctl enable webui
-systemctl start webui
+
 
 
 
