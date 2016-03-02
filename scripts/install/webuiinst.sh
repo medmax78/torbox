@@ -17,17 +17,18 @@ echo "Copying Web UI script to location..."
 
 cp -r ./webui/* ${WEBUI_LOCATION}
 
-chown -R ${WEBUI_USER}:${WEBUI_USER} ${WEBUI_LOCATION}
 
 CURRENTDIR=`pwd`
 
 cd ${WEBUI_LOCATION}
 
-su -c 'npm install' ${WEBUI_USER}
-
-echo "Enabling webui"
+npm install
 
 cd $CURRENTDIR
+
+chown -R ${WEBUI_USER}:${WEBUI_USER} ${WEBUI_LOCATION}
+
+echo "Enabling webui"
 
 cp ./scripts/etc/init.d/webui /etc/init.d/webui
 
