@@ -69,3 +69,7 @@ depmod -a
 echo "Setting up network and access point..."
 ./scripts/install/setupnet.sh
 
+echo "Installing WebGUI..."
+./scripts/install/webuiinst.sh
+
+
