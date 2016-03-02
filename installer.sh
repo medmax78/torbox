@@ -61,6 +61,7 @@ echo "rtnet7601Uap" >>/etc/modules
 
 cp -r ./hardware/${HARDWARE}/${KERNEL_VERSION}/wifi/etc/* /etc/
 cp -r ./hardware/${HARDWARE}/${KERNEL_VERISON}/wifi/firmware/* /lib/firmware/
+cp -r ./hardware/${HARDWARE}/usr/local/bin/* /usr/local/bin/*
 echo "Disabling old 8188eu modules"
 mkdir /lib/modules-disabled
 mv /lib/modules/${KERNEL_VERISON}/kernel/drivers/net/wireless/rtl8188eu /lib/modules-disabled/
