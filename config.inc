@@ -26,7 +26,7 @@ WEBUI_LOCATION=/opt/webui
 I2P_USER=${USER}
 I2P_LOCATION=/opt/i2p
 
-##Use offical repo tor
+##Use offical debian (ubuntu) repo tor
 USE_STOCK_TOR=1
 
 
