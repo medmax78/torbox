@@ -14,6 +14,8 @@ apt-get update
 apt-get -y install tor deb.torproject.org-keyring
 
 ####This part is for installing from tor debian offical repo. Comment previous part in case of any issues and uncomment next strings
+#rm /etc/apt/sources.list.d/tor-repo.list
+#apt-get update
 #apt-get -y install tor
 #systemctl unmask tor.service
 
