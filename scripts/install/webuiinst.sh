@@ -33,7 +33,7 @@ echo "Enabling webui"
 cp ./scripts/etc/init.d/webui /etc/init.d/webui
 
 echo "Applying settings to webui script"
-sed -i "s/WEBUI_ROOT=\/opt\/webui/WEBUI_ROOT=${WEBUI_LOCATION}/" /etc/init.d/webui
+sed -i "s~WEBUI_ROOT=/opt/webui~WEBUI_ROOT=${WEBUI_LOCATION}~" /etc/init.d/webui
 sed -i "s/WEBUI_GROUP=webui/WEBUI_GROUP=${WEBUI_USER}/" /etc/init.d/webui
 sed -i "s/WEBUI_USER=webui/WEBUI_USER=${WEBUI_USER}/" /etc/init.d/webui
 
