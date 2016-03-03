@@ -18,6 +18,8 @@ echo "       broadcast $IP_BROADCAST" >>/etc/network/interfaces.d/wlan0
 
 apt-get update
 apt-get -y install iptables
+apt-get -y remove dnsmasq
+apt-get -y purge dnsmasq
 apt-get -y install dnsmasq
 
 echo "Applying dnsmasq conf rules..."
