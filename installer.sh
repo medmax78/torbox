@@ -66,7 +66,7 @@ cp -r ./hardware/${HARDWARE}/${KERNEL_VERISON}/wifi/firmware/* /lib/firmware/
 
 echo "Disabling old 8188eu modules"
 mkdir /lib/modules-disabled
-mv /lib/modules/${KERNEL_VERISON}/kernel/drivers/net/wireless/rtl8188eu /lib/modules-disabled/
+mv /lib/modules/${KERNEL_VERSION}/kernel/drivers/net/wireless/rtl8188eu /lib/modules-disabled/
 depmod -a
 
 echo "Setting up network and access point..."
