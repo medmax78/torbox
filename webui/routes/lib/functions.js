@@ -106,8 +106,13 @@ this.sysInfo = function()
  });
 
 
- var execSync = require('child_process').execSync;
- var temperature = execSync(config.strWrapper+" "+config.strTemperature); 
+ var temperature = "Not supported";
+  if (doesExist(config.strTemperature))
+  {
+       var execSync = require('child_process').execSync;
+       temperature = execSync(config.strWrapper+" "+config.strTemperature); 
+  }
+ 
   
  var system_info = {
    
@@ -136,6 +141,16 @@ function isAscii(text)
     return true;
   
   return false;
+}
+
+function doesExist(path) {
+  var fs=require('fs');
+  try {
+    fs.statSync(path)
+    return true
+  } catch(err) {
+    return !(err && err.code === 'ENOENT');
+  }
 }
 
 this.i2pAction = function(i2p)
