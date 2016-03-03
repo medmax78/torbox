@@ -15,7 +15,7 @@ mkdir unpackedjar
 mv ${I2P_LOCATION}/lib/jbigi.jar ./unpackedjar
 cd unpackedjar
 unzip jbigi.jar
-su -c "cp libjbigi-linux-armv6.so /opt/i2p/libjbigi.so" ${I2P_USER}
+su -c "cp libjbigi-linux-armv6.so ${I2P_LOCATION}/libjbigi.so" ${I2P_USER}
 cd ..
 rm -rf unpackedjar
 su -c "/usr/local/bin/starti2p.sh" ${I2P_USER}
