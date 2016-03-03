@@ -1,4 +1,5 @@
 #!/bin/sh
+. ./config.inc
 apt-get -y remove tor
 apt-get -y remove torsocks
 apt-get -y purge tor
