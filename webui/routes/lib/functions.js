@@ -157,7 +157,7 @@ this.i2pAction = function(i2p)
 {
 
    var execSync = require('child_process').execSync;
-   script = execSync(config.strWrapper+" "+config.strSystemctl+" "+i2p.toLowerCase()+" i2p");
+   script = execSync(config.strWrapper+" "+config.strSystemctl+" "+"i2p "+i2p.toLowerCase());
    return "Command successfully passed to system";
 
 }
