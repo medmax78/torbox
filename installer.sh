@@ -62,7 +62,7 @@ echo "mt7601Uap" >>/etc/modules
 echo "rtnet7601Uap" >>/etc/modules
 
 cp -r ./hardware/${HARDWARE}/${KERNEL_VERSION}/wifi/etc/* /etc/
-cp -r ./hardware/${HARDWARE}/${KERNEL_VERISON}/wifi/firmware/* /lib/firmware/
+cp -r ./hardware/${HARDWARE}/${KERNEL_VERSION}/wifi/firmware/* /lib/firmware/
 
 echo "Disabling old 8188eu modules"
 mkdir /lib/modules-disabled
