@@ -16,11 +16,11 @@ echo "       netmask $IP_NETMASK" >>/etc/network/interfaces.d/wlan0
 echo "       network $IP_NETWORK" >>/etc/network/interfaces.d/wlan0
 echo "       broadcast $IP_BROADCAST" >>/etc/network/interfaces.d/wlan0
 
-apt-get update
-apt-get -y install iptables
-apt-get -y remove dnsmasq
-apt-get -y purge dnsmasq
-apt-get -y install dnsmasq
+apt-get update > /dev/null
+apt-get -y install iptables > /dev/null
+apt-get -y remove dnsmasq > /dev/null
+apt-get -y purge dnsmasq > /dev/null
+apt-get -y install dnsmasq > /dev/null
 
 echo "Applying dnsmasq conf rules..."
 echo " " >>/etc/dnsmasq.conf
