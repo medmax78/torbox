@@ -3,7 +3,7 @@
 ./scripts/install/nodejsinst.sh
 
 echo "Installing sudo..."
-apt-get -y install sudo
+apt-get -y install sudo > /dev/null
 
 echo "Adding user ${WEBUI_USER} to system and adding it to sudoers..."
 useradd ${WEBUI_USER} -s /bin/false
