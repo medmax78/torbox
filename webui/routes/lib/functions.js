@@ -106,7 +106,7 @@ this.sysInfo = function()
  });
 
 
- var temperature = "Not supported";
+ var temperature = "Not supported ";
   if (doesExist(config.strTemperature))
   {
        var execSync = require('child_process').execSync;
