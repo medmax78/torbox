@@ -14,7 +14,7 @@ echo "Copying needed scripts to /usr/local/bin..."
 chmod a+x ./scripts/usr/local/bin/*
 cp ./scripts/usr/local/bin/* /usr/local/bin/
 chmod a+x ./hardware/${HARDWARE}/usr/local/bin/*
-cp -r ./hardware/${HARDWARE}/usr/local/bin/* /usr/local/bin/*
+cp -r ./hardware/${HARDWARE}/usr/local/bin/* /usr/local/bin/
 
 
 if [ ${HARDWARE} = "orangepipc" ]; then
