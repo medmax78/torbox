@@ -13,7 +13,7 @@ echo " " >>/etc/sudoers
 echo "${WEBUI_USER}   ALL = (root) NOPASSWD: /sbin/shutdown" >>/etc/sudoers
 echo "${WEBUI_USER}   ALL = (root) NOPASSWD: /usr/local/bin/all_tor.sh" >>/etc/sudoers
 echo "${WEBUI_USER}   ALL = (root) NOPASSWD: /usr/local/bin/cputemp.sh" >>/etc/sudoers
-echo "${WEBUI_USER}   ALL = (root) NOPASSWD: /bin/systemctl" >>/etc/sudoers
+echo "${WEBUI_USER}   ALL = (root) NOPASSWD: /etc/init.d" >>/etc/sudoers
 
 
 mkdir ${WEBUI_LOCATION}
