@@ -1,8 +1,8 @@
 #!/bin/sh
-apt-get -y remove privoxy
-apt-get -y clean privoxy
-apt-get update
-apt-get -y install privoxy
+apt-get -y remove privoxy > /dev/null
+apt-get -y clean privoxy > /dev/null
+apt-get update > /dev/null
+apt-get -y install privoxy > /dev/null
 echo "Configuring privoxy..."
 /etc/init.d/privoxy stop
 sed -i 's/listen-address\s.*localhost:8118/listen-address 0.0.0.0:8118/' /etc/privoxy/config
