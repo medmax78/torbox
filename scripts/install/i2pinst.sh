@@ -5,6 +5,7 @@ I2PJAR=i2pinstall_0.9.24.jar
 
 apt-get update
 apt-get -y install unzip
+sed -i "s/I2P_LOCATION=\/opt\/i2p/I2P_LOCATION=${I2P_LOCATION}/" /usr/local/bin/startip2.sh
 wget -t0 -c ${I2PURL}
 mkdir ${I2P_LOCATION}
 chown ${I2P_USER} ${I2P_LOCATION}
@@ -27,9 +28,9 @@ rm -rf ./$I2PJAR
 cp ./scripts/etc/init.d/i2p /etc/init.d/i2p
 sed -i "s/USER=orangepi/USER=${I2P_USER}/" /etc/init.d/i2p
 chmod a+x /etc/init.d/i2p
-systemctl enable i2p
+update-rc.d i2p defaults
+update-rc.d i2p enable
 echo "Sleeping for 30 seconds to let i2p start/settle..."
 sleep 30
-systemctl disable i2p
-sed -i "s/I2P_LOCATION=\/opt\/i2p/I2P_LOCATION=${I2P_LOCATION}/" /usr/local/bin/startip2.sh
+update-rc.d i2p disable
 echo "I2P installation finised, hopefully without errors..."
