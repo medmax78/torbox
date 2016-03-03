@@ -1,18 +1,17 @@
 #!/bin/sh
 . ./config.inc
-apt-get -y remove tor
-apt-get -y remove torsocks
-apt-get -y purge tor
-apt-get -y remove deb.torproject.org-keyring
-apt-get -y purge deb.torproject.org-keyring
+apt-get -y remove tor > /dev/null
+apt-get -y remove torsocks > /dev/null
+apt-get -y purge tor > /dev/null
+apt-get -y remove deb.torproject.org-keyring > /dev/null
+apt-get -y purge deb.torproject.org-keyring > /dev/null
 
 if [ ${USE_STOCK_TOR} = "1" ]; then
    #### This part is for installing stock tor
    echo "Installing stock tor..."
    rm /etc/apt/sources.list.d/tor-repo.list
-   apt-get update
-   apt-get -y install tor
-   systemctl unmask tor.service   
+   apt-get update > /dev/null
+   apt-get -y install tor > /dev/null  
 else
    ####This part is for installing from tor offical repo.
    echo "Installing tor from torproject repo..."
