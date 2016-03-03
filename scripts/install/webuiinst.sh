@@ -9,7 +9,12 @@ echo "Adding user ${WEBUI_USER} to system and adding it to sudoers..."
 useradd ${WEBUI_USER} -s /bin/false
 
 echo " " >>/etc/sudoers
-cat ./scripts/etc/sudoers.example >>/etc/sudoers
+
+echo "${WEBUI_USER}   ALL = (root) NOPASSWD: /sbin/shutdown" >>/etc/sudoers
+echo "${WEBUI_USER}   ALL = (root) NOPASSWD: /usr/local/bin/all_tor.sh" >>/etc/sudoers
+echo "${WEBUI_USER}   ALL = (root) NOPASSWD: /usr/local/bin/cputemp.sh" >>/etc/sudoers
+echo "${WEBUI_USER}   ALL = (root) NOPASSWD: /bin/systemctl" >>/etc/sudoers
+
 
 mkdir ${WEBUI_LOCATION}
 
