@@ -27,7 +27,7 @@ fi
 
 
 
-systemctl stop tor
+/etc/init.d/tor stop
 
 echo "Configuring tor..."
 
@@ -47,5 +47,5 @@ echo "DNSListenAddress 0.0.0.0" >>/etc/tor/torrc
 
 echo "TransListenAddress 0.0.0.0" >>/etc/tor/torrc
 
-systemctl enable tor
-systemctl start tor
+update-rc.d tor enable
+/etc/init.d/tor start
