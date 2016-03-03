@@ -24,7 +24,7 @@ apt-get -y install dnsmasq > /dev/null
 
 echo "Applying dnsmasq conf rules..."
 echo " " >>/etc/dnsmasq.conf
-echo "interface=${INTERFACE}" >> /etc/dnsmasq.conf
+echo "interface=wlan0" >> /etc/dnsmasq.conf
 echo "dhcp-range=${DHCP_RANGE}" >> /etc/dnsmasq.conf
 echo "address=${HOSTADDR}" >> /etc/dnsmasq.conf
 
