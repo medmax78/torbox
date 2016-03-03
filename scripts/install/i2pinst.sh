@@ -34,4 +34,5 @@ update-rc.d i2p enable
 /etc/init.d/i2p start
 echo "Sleeping for 30 seconds to let i2p start/settle..."
 sleep 30
+update-rc.d i2p disable
 echo "I2P installation finised, hopefully without errors..."
