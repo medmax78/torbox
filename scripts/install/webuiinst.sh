@@ -38,7 +38,11 @@ sed -i "s/WEBUI_GROUP=webui/WEBUI_GROUP=${WEBUI_USER}/" /etc/init.d/webui
 sed -i "s/WEBUI_USER=webui/WEBUI_USER=${WEBUI_USER}/" /etc/init.d/webui
 
 
-systemctl enable webui
+update-rc.d webui defaults
+update-rc.d webui enable
+
+/etc/init.d/webui start
+
 
 
 
