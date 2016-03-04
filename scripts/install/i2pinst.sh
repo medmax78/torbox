@@ -21,8 +21,8 @@ rm -rf unpackedjar
 su -c "/usr/local/bin/starti2p.sh" ${I2P_USER}
 sleep 20
 su -c "/usr/local/bin/stopi2p.sh" ${I2P_USER}
-su -c "sed -i 's/clientApp.0.args=7657\s*::1,127.0.0.1\s*.\/webapps\//clientApp.0.args=7657 0.0.0.0 .\/webapps\//' /home/orangepi/.i2p/clients.config" ${I2P_USER}
-su -c "sed -i 's/clientApp.4.startOnLoad=true/clientApp.4.startOnLoad=false/'  /home/orangepi/.i2p/clients.config" ${I2P_USER}
+su -c "sed -i 's/clientApp.0.args=7657\s*::1,127.0.0.1\s*.\/webapps\//clientApp.0.args=7657 0.0.0.0 .\/webapps\//' /home/${I2P_USER}/.i2p/clients.config" ${I2P_USER}
+su -c "sed -i 's/clientApp.4.startOnLoad=true/clientApp.4.startOnLoad=false/'  /home/${I2P_USER}/.i2p/clients.config" ${I2P_USER}
 su -c "/usr/local/bin/starti2p.sh" ${I2P_USER}
 rm -rf ./$I2PJAR
 cp ./scripts/etc/init.d/i2p /etc/init.d/i2p
