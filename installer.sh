@@ -24,6 +24,12 @@ else
         echo "Not an OrangePI PC. Skipping fix thermal problems.."
 fi
 
+if [ -f /usr/local/bin/powersave.sh ]; then
+  echo "Setting powersave script..."
+  cp ./scripts/etc/init.d/powersave /etc/init.d/powersave
+  update-rc.d powersave defaults
+  update-rc.d powersave enable
+fi
 
 ##
 echo "Installing tor..."
