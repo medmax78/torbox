@@ -27,7 +27,7 @@ su -c "/usr/local/bin/starti2p.sh" ${I2P_USER}
 rm -rf ./$I2PJAR
 cp ./scripts/etc/init.d/i2p /etc/init.d/i2p
 sed -i "s/USER=orangepi/USER=${I2P_USER}/" /etc/init.d/i2p
-sed -i "s~DAEMON=/opt/i2p/2prouter~DAEMON=${I2P_LOCATION}/i2prouter~" /etc/init.d/i2p
+sed -i "s~DAEMON=/opt/i2p/i2prouter~DAEMON=${I2P_LOCATION}/i2prouter~" /etc/init.d/i2p
 chmod a+x /etc/init.d/i2p
 update-rc.d i2p defaults
 update-rc.d i2p enable
