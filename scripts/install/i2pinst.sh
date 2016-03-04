@@ -4,13 +4,18 @@ I2PURL=http://download.i2p2.de/releases/0.9.24/i2pinstall_0.9.24.jar
 I2PJAR=i2pinstall_0.9.24.jar
 
 apt-get update > /dev/null
-apt-get -y install unzip > /dev/null
+apt-get -y install unzip expect > /dev/null
 sed -i "s~I2P_LOCATION=/opt/i2p~I2P_LOCATION=${I2P_LOCATION}~" /usr/local/bin/starti2p.sh
 wget -t0 -c ${I2PURL}
 mkdir ${I2P_LOCATION}
-chown ${I2P_USER} ${I2P_LOCATION}
-echo "ENTER ${I2P_LOCATION} as installation path!"
-su -c "java -jar ./$I2PJAR -console" ${I2P_USER}
+expect <<EOF
+spawn  java -jar ${I2P_JAR} -console
+expect "press 1 to continue, 2 to quit, 3 to redisplay" { send "1\r" }
+expect "Select target path*\r" {send "${I2P_LOCATION}\r"}
+expect "press 1 to continue, 2 to quit, 3 to redisplay\r" { send "1\r"}
+expect "*Console installation done*" {send "\r"} 
+EOF
+chown -r ${I2P_USER} ${I2P_LOCATION}
 mkdir unpackedjar
 mv ${I2P_LOCATION}/lib/jbigi.jar ./unpackedjar
 cd unpackedjar
