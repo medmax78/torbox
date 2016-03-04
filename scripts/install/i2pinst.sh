@@ -15,7 +15,7 @@ expect "Select target path*\r" {send "${I2P_LOCATION}\r"}
 expect "press 1 to continue, 2 to quit, 3 to redisplay\r" { send "1\r"}
 expect "*Console installation done*" {send "\r"} 
 EOF
-chown -r ${I2P_USER} ${I2P_LOCATION}
+chown -R ${I2P_USER} ${I2P_LOCATION}
 mkdir unpackedjar
 mv ${I2P_LOCATION}/lib/jbigi.jar ./unpackedjar
 cd unpackedjar
