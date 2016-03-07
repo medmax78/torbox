@@ -37,6 +37,7 @@ Things to keep in mind:
 
 * eth0 interface should be configured and set to use DHCP
 * Network Manager should be disabled or even completely uninstalled. Or it should not manage your WiFi.
+* You will need some libnl packages - consider installing libnl3-200 and libnl-genl-3-200 to allow hostapd operation.
 
 Now test it - insert SD, then power on and try to login to your system via SSH.
 
