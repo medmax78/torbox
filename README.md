@@ -54,7 +54,7 @@ Boot in your freshly prepared SD-card.
 Login via ssh and run following commands:
 
 * `sudo apt-get install git`
-* `git clone https://github.com/znoxx/torbox`
+* `git clone https://github.com/znoxx/torbox.git`
 
 After everything is downloaded:
 
