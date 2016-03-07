@@ -1,7 +1,7 @@
 ## for now - orange pi is supported.
 HARDWARE=orangepipc
 ## Put your hostname here
-HOSTNAME=orangebox
+HOSTNAME=OrangePi
 ## Active user (orangepi default one for orangepi, pi - for raspberry pi)
 USER=orangepi
 ## SSID name
