@@ -36,8 +36,7 @@ You can adapt your own image, you use.
 Things to keep in mind:
 
 * eth0 interface should be configured and set to use DHCP
-* Network Manager should be disabled or even completely uninstalled.
-Or it should not manage your WiFi.
+* Network Manager should be disabled or even completely uninstalled. Or it should not manage your WiFi.
 
 Now test it - insert SD, then power on and try to login to your system via SSH.
 
@@ -46,8 +45,7 @@ Now test it - insert SD, then power on and try to login to your system via SSH.
 I decided to suppport cheapest dongles "out of the box", which can run in AP mode.
 
 * 0bda:0179 Realtek Semiconductor Corp. RTL8188ETV Wireless LAN 802.11n Network Adapter (http://znoxx.me/cgi-bin/rurl.cgi?1RODdS8)
-* 148f:7601 Ralink Technology, Corp. MT7601U Wireless Adapter
-(http://znoxx.me/cgi-bin/rurl.cgi?1R2y3op)
+* 148f:7601 Ralink Technology, Corp. MT7601U Wireless Adapter (http://znoxx.me/cgi-bin/rurl.cgi?1R2y3op)
 
 However, it's not a "final" list. Other dongles are supported too, just make sure they can run with hostapd driver __"nl80211"__ or __"rtl871xdrv"__. Or even without hostapd, like listed Ralink/MTK one.
 
@@ -76,6 +74,7 @@ What to tweak:
 * USE_STOCK_TOR - this indicates, that TOR from official debian/ubuntu repo will be installed. In case you want one bleeding edge - set to "0" and torproject repos will be used. But keep in mind, that you will may have problems with systemd compatibility.
 
 When you are done, proceed with
+
 * `sudo ./installer.sh`
 
 It's completely automated and will install and configure software and also set __wlan0__ interface.
@@ -91,6 +90,7 @@ Default username/password is "orangepi/orangepi". You can change them from the W
 
 ## Modes of operation
 Device has generally 3 modes of operation:
+
 
 * _TOR_ - all traffic from __WiFi clients__ is routed through TOR
 * _PRIVOXY_ - all traffic from __WiFi clients__ is routed thorough TOR and PRIVOXY. You can set some privoxy rules to get rid of ads and annoying "Like" buttons, for example .Better check with official privoxy documentation (http://privoxy.org)
