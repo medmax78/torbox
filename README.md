@@ -148,6 +148,7 @@ Drivers bundled:
 
 ## Disclaimer
 Things to keep in mind
+
 * Scripts are tested and supposed to be run ok. However, there is no warranty, that it will work for you or suite particular needs.
 * Also I'm not responsible for damage of any kind, caused directly or indirectly to your hardware or privacy.
 * TOR and I2P are not a silver bullet and designed to protect your privacy. The particular usage requires some fundamental knowledge.
