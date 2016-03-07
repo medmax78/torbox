@@ -4,6 +4,7 @@ anonymizing TOR middlebox quickly and easily.
 
 ## System requirements
 Current version is targeted on OrangePI H3 hardware and assumes the following:
+
 * You run Debian-based OS
 * You own compatible USB wifi dongle (see list below)
 * Your "Internets" are connected via Ethernet cable and DHCP is possible for eth0 wired interface
@@ -33,15 +34,16 @@ Initial image is targeted for Orange Pi PC.
 #### Other images
 You can adapt your own image, you use.
 Things to keep in mind:
+
 * eth0 interface should be configured and set to use DHCP
-* Network Manager should be disabled or even completely uninstalled.
-Or it should not manage your WiFi.
+* Network Manager should be disabled or even completely uninstalled. Or it should not manage your WiFi.
 
 Now test it - insert SD, then power on and try to login to your system via SSH.
 
 ### Supported Wifi dongles
 
 I decided to suppport cheapest dongles "out of the box", which can run in AP mode.
+
 * 0bda:0179 Realtek Semiconductor Corp. RTL8188ETV Wireless LAN 802.11n Network Adapter (Buy it here)
 * 148f:7601 Ralink Technology, Corp. MT7601U Wireless Adapter
 
@@ -50,6 +52,7 @@ However, it's not a "final" list. Other dongles are supported too, just make sur
 ## Starting the installation
 Boot in your freshly prepared SD-card.
 Login via ssh and run following commands:
+
 * `sudo apt-get install git`
 * `git clone https://github.com/znoxx/torbox`
 
@@ -60,6 +63,7 @@ After everything is downloaded:
 Now adjust __config.inc__ to your needs.
 
 What to tweak:
+
 * USER - if you use "orangepi" user, better leave it. If you use your own - change the name.
 * SSID_NAME - name of your future WiFi.
 * SSID_PASSWORD - WiFi password
@@ -70,6 +74,7 @@ What to tweak:
 * USE_STOCK_TOR - this indicates, that TOR from official debian/ubuntu repo will be installed. In case you want one bleeding edge - set to "0" and torproject repos will be used. But keep in mind, that you will may have problems with systemd compatibility.
 
 When you are done, proceed with
+
 * `sudo ./installer.sh`
 
 It's completely automated and will install and configure software and also set __wlan0__ interface.
@@ -85,8 +90,11 @@ Default username/password is "orangepi/orangepi". You can change them from the W
 
 ##Modes of operation
 Device has generally 3 modes of operation:
+
 * TOR - all traffic from __WiFi clients__ is routed through TOR
+
 * PRIVOXY - all traffic from __WiFi__ clients is routed thorough TOR and PRIVOXY. You can set some privoxy rules to get rid of ads and annoying "Like" buttons, for example .Better check with official privoxy documentation (http://privoxy.org)
+
 * DIRECT - All traffic is routed directly without TOR or/and privoxy, but you can still setup http/https proxy in your browser, pointing IP_ADDRESS and port 8118 to use anonymous internet browsing.
 
 Those settings are switched via WebUI. Remember that traffic from torbox itself is not routed via TOR. E.g. running "apt-get" on system will go to internet directly. So, again - Wifi clients only are torred.
@@ -105,6 +113,7 @@ For other dongles - hostapd is used.
 ## Using other WiFi dongles
 
 To use some other WiFi adapters, keep in mind following:
+
 * You should be sure that you have the appropriate driver and firmware if needed
 * You have to change /etc/hostapd/hostapd.conf
 * Better to rename your interface to wlan0 to make things running smoothly
