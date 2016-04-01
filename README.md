@@ -80,6 +80,7 @@ What to tweak:
 * I2P_USER - don't think you should change it
 * I2P_LOCATION - where I2P will be installed.
 * USE_STOCK_TOR - this indicates, that TOR from official debian/ubuntu repo will be installed. In case you want one bleeding edge - set to "0" and torproject repos will be used. But keep in mind, that you will may have problems with systemd compatibility.
+* HOSTADDR - this one allow you to access system via name in browser. It is generated from "hostname", so in example you will have http://orangepi.torbox:3000. If your device in _direct_ mode - you can access it by name. 
 
 When you are done, proceed with
 
