@@ -94,9 +94,10 @@ Installer runs significant amount of time, since it's downloads packages, instal
 After you are done, insert your WiFi dongle and powercycle the platform.
 After boot, your new Torred and I2Ped Access point will be visible.
 Connect to it, using the SSID and password, you set up on previous step.
-Being connected to your WiFi, open URL http://check.torproject.org - and if everything is ok, you will see confirmation, that TOR is configured.
-Now check URL http://IP_ADDRESS:3000 - the IP you set in config. WEB UI should be accessible.
+Being connected to your WiFi, open any URL in your browser. 
+Now check URL http://IP_ADDRESS:3000 (or hostname http://yourhost.torbox:3000) - the IP or name you set in config. WEB UI should be accessible.
 Default username/password is "orangepi/orangepi". You can change them from the WebUI.
+Change mode to TOR or Privoxy and open http://check.torproject.org - and if everything is ok, you will see confirmation, that TOR is configured.
 
 ## Modes of operation
 Device has generally 3 modes of operation:
