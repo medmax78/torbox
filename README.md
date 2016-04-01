@@ -15,7 +15,7 @@ implemented, as long as I'll get my hands on this hardware.
 Currently supported hardware platforms:
 
 |Board|Hardware target name |
-|---|---|
+|:---|:---|
 |Orange Pi PC|orangepipc|
 |Orange Pi One|orangepipc|
 
