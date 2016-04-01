@@ -17,13 +17,6 @@ chmod a+x ./hardware/${HARDWARE}/usr/local/bin/*
 cp -r ./hardware/${HARDWARE}/usr/local/bin/* /usr/local/bin/
 
 
-if [ ${HARDWARE} = "orangepipc" ]; then
-        echo "Fixing thermal problems..."
-        /usr/local/bin/fix-thermal-problems.sh
-else
-        echo "Not an OrangePI PC. Skipping fix thermal problems.."
-fi
-
 if [ -f /usr/local/bin/powersave.sh ]; then
   echo "Setting powersave script..."
   cp ./scripts/etc/init.d/powersave /etc/init.d/powersave
