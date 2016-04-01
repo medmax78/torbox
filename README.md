@@ -14,20 +14,9 @@ implemented, as long as I'll get my hands on this hardware.
 
 Currently supported hardware platforms:
 
-<table>
-  <tr>
-    <th>Board</th>
-    <th>Hardware target name</th>
-  </tr>
-  <tr>
-    <td>Orange Pi PC</td>
-    <td>orangepipc</td>
-  </tr>
-  <tr>
-    <td>Orange Pi One</td>
-    <td>orangepipc</td>
-  </tr>
-</table>
+| Board | Hardware target name |
+| Orange Pi PC | orangepipc |
+| Orange Pi One | orangepipc |
 
 ## Hardware requirements
 ### Media preparation
