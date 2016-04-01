@@ -9,7 +9,7 @@ Current version is targeted on OrangePI H3 hardware and assumes the following:
 * You own compatible USB wifi dongle (see list below)
 * Your "Internets" are connected via Ethernet cable and DHCP is possible for eth0 wired interface
 
-Raspberry and other "Pi" support is planned, along with Orange Pi Mini, and will be
+Raspberry  support is planned and will be
 implemented, as long as I'll get my hands on this hardware.
 
 Currently supported hardware platforms:
