@@ -12,6 +12,23 @@ Current version is targeted on OrangePI H3 hardware and assumes the following:
 Raspberry and other "Pi" support is planned, along with Orange Pi Mini, and will be
 implemented, as long as I'll get my hands on this hardware.
 
+Currently supported hardware platforms:
+
+<table>
+  <tr>
+    <th>Board</th>
+    <th>Hardware target name</th>
+  </tr>
+  <tr>
+    <td>Orange Pi PC</td>
+    <td>orangepipc</td>
+  </tr>
+  <tr>
+    <td>Orange Pi One</td>
+    <td>orangepipc</td>
+  </tr>
+</table>
+
 ## Hardware requirements
 ### Media preparation
 #### Pre-made image
@@ -22,14 +39,14 @@ _Different manufacturers use diffrent "2GB" size interpretation. In case you rec
 "out of space" error, change manufacturer or use 4GB card. They are cheap._
 
 Prepared image can be downloaded here:
-http://znoxx.me/cgi-bin/url.cgi?1QF4P9E
+http://znoxx.me/cgi-bin/url.cgi?1Y4dQxp
 
 Unpack it and "dd" to your microSD. Or use Win32DiskImager to write unpacked image on
 Windows-based systems.
 Mount first VFAT partition (or just re-insert your card on Windows) and copy your
 hardware-script.bin to script.bin.
 
-Initial image is targeted for Orange Pi PC.
+Initial image is targeted for Orange Pi PC. If you want to use it with Orange Pi One, you __have to__ do this. 
 
 #### Other images
 You can adapt your own image, you use.
