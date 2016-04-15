@@ -1,8 +1,8 @@
 # Changes for 15-04-2016:
 * WebUI updated to 0.2.0
-  * Jade->Pug migrated
-  * Dependencies upgraded to latest npm versions
-  * Fixed issues in templates to comply with Pug
+    * Jade->Pug migrated
+    * Dependencies upgraded to latest npm versions
+    * Fixed issues in templates to comply with Pug
 
 ## Manual update of webui
 
