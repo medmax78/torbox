@@ -3,7 +3,7 @@ extends layout
 block content
   h1= title
   if message
-   h2= message
+    h2= message
   form(name="access", action="/system/access", method="post")
     fieldset
       label(for="current_password")
@@ -14,11 +14,11 @@ block content
         span  New password
         input(type="password", name="new_password", required="required")
         
-       label(for="confirm_password")
+      label(for="confirm_password")
         span  Confirm password
         input(type="password", name="confirm_password", required="required")
         
-     fieldset                                           
-       input(type="submit", value="Apply")
+    fieldset                                           
+      input(type="submit", value="Apply")
   br
   a(href="/") Main page                                           
