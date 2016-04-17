@@ -119,6 +119,7 @@ To access I2P site - set up a proxy on your system, pointing to IP_ADDRESS:8118 
 After things are tested and you are happy, run
 
 * `sudo ./finalize_inst.sh`
+* Optional: `sudo apt-get upgrade`
 
 In project dir. It will adjust the firewall to close the access from outer world and clean some temp files.
 
