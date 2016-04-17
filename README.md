@@ -62,6 +62,7 @@ However, it's not a "final" list. Other dongles are supported too, just make sur
 Boot in your freshly prepared SD-card.
 Login via ssh and run following commands:
 
+* `sudo apt-get update`
 * `sudo apt-get install git`
 * `git clone https://github.com/znoxx/torbox.git`
 
