@@ -52,7 +52,7 @@ Now test it - insert SD, then power on and try to login to your system via SSH.
 
 I decided to suppport cheapest dongles "out of the box", which can run in AP mode.
 
-* 0bda:0179 Realtek Semiconductor Corp. RTL8188ETV Wireless LAN 802.11n Network Adapter (http://znoxx.me/cgi-bin/rurl.cgi?1RODdS8)
+* 0bda:0179 Realtek Semiconductor Corp. RTL8188ETV Wireless LAN 802.11n Network Adapter (http://znoxx.me/cgi-bin/url.cgi?1qZe7Yl)
 * 0bda:8179 Realtek Semiconductor Corp. RTL8188EUS 802.11n Wireless Network Adapter (http://znoxx.me/cgi-bin/rurl.cgi?1UYTCqW)
 * 148f:7601 Ralink Technology, Corp. MT7601U Wireless Adapter (http://znoxx.me/cgi-bin/rurl.cgi?1R2y3op)
 
