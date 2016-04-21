@@ -8,13 +8,13 @@
 
 1. Fetch new version from GIT
 2. Stop WebUI (usually - `sudo /etc/init.d/webui stop`)
-3. Backup your /opt/webui somwhere
+3. Backup your /opt/webui somwhere (it is **important**)
 4. Delete contents /opt/webui (but keep directory)
 5. Copy webui contents of git copy to /opt/webui
 6. `cd /opt/webui`
 7. `sudo npm install`
 8. `chown webui:webui -R *` (change webui to appropriate user you use to run WebUI)
-9. Copy config dir from your saved backup (1) to /opt/webui
+9. Copy config dir from your saved backup (3) to /opt/webui
 10. Start WebUI (usually - `sudo /etc/init.d/webui start`)
 
 # Changes for 01-04-2016:
