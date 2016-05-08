@@ -56,16 +56,26 @@ fi
 
 
 echo "8188eu" >>/etc/modules
-echo "rtutil7601Uap" >>/etc/modules
-echo "mt7601Uap" >>/etc/modules
-echo "rtnet7601Uap" >>/etc/modules
+
+if [ ${HARDWARE} = "orangepipc" ]; then
+  echo "rtutil7601Uap" >>/etc/modules
+  echo "mt7601Uap" >>/etc/modules
+  echo "rtnet7601Uap" >>/etc/modules
+fi
 
 cp -r ./hardware/${HARDWARE}/${KERNEL_VERSION}/wifi/etc/* /etc/
 cp -r ./hardware/${HARDWARE}/${KERNEL_VERSION}/wifi/firmware/* /lib/firmware/
 
-echo "Disabling old 8188eu modules"
-mkdir /lib/modules-disabled
-mv /lib/modules/${KERNEL_VERSION}/kernel/drivers/net/wireless/rtl8188eu /lib/modules-disabled/
+if [ ${HARDWARE} = "raspberrypi2" ]; then
+  wget https://github.com/porjo/mt7601/raw/master/src/mcu/bin/MT7601.bin -O /lib/firmware/mt7601u.bin
+fi
+
+if [ ${HARDWARE} = "orangepipc" ]; then
+  echo "Disabling old 8188eu modules"
+  mkdir /lib/modules-disabled
+  mv /lib/modules/${KERNEL_VERSION}/kernel/drivers/net/wireless/rtl8188eu /lib/modules-disabled/
+fi
+
 depmod -a
 
 echo "Setting up network and access point..."
