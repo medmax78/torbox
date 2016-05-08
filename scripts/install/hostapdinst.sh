@@ -2,6 +2,8 @@
 . ./config.inc
 
 echo "Installing hostapd..."
+apt-get update -y
+apt-get install -y haveged
 tar -xzvf ./hostapd/hostapd_arm.tar.gz -C /usr/local/bin
 mkdir /etc/hostapd
 cp ./scripts/etc/hostapd/hostapd.conf /etc/hostapd/hostapd.conf
