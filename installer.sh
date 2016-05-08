@@ -63,6 +63,9 @@ if [ ${HARDWARE} = "orangepipc" ]; then
   echo "rtnet7601Uap" >>/etc/modules
 fi
 
+
+mkdir -p /lib/firmware/rtlwifi
+
 cp -r ./hardware/${HARDWARE}/${KERNEL_VERSION}/wifi/etc/* /etc/
 cp -r ./hardware/${HARDWARE}/${KERNEL_VERSION}/wifi/firmware/* /lib/firmware/
 
