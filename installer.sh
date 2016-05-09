@@ -42,42 +42,35 @@ echo "Installing i2p.."
 ./scripts/install/i2pinst.sh
 
 ##
+
 echo "Installing nescessary hardware modules..."
+
 KERNEL_VERSION=`uname -r`
+
 
 mkdir /lib/modules/${KERNEL_VERSION}/wifiap
 cp ./hardware/${HARDWARE}/${KERNEL_VERSION}/wifi/*.ko /lib/modules/${KERNEL_VERSION}/wifiap
 
 
 if [ ${HARDWARE} = "orangepipc" ]; then
-        echo "Enabling crypto module"
-        echo "ss" >>/etc/modules
-fi
-
-
-echo "8188eu" >>/etc/modules
-
-if [ ${HARDWARE} = "orangepipc" ]; then
+  echo "Enabling crypto module"
+  echo "ss" >>/etc/modules
+  echo "8188eu" >>/etc/modules
   echo "rtutil7601Uap" >>/etc/modules
   echo "mt7601Uap" >>/etc/modules
   echo "rtnet7601Uap" >>/etc/modules
+
+  echo "Disabling old 8188eu modules"
+  mkdir /lib/modules-disabled
+  mv /lib/modules/${KERNEL_VERSION}/kernel/drivers/net/wireless/rtl8188eu /lib/modules-disabled/
+
 fi
 
 
 mkdir -p /lib/firmware/rtlwifi
 
-cp -r ./hardware/${HARDWARE}/${KERNEL_VERSION}/wifi/etc/* /etc/
-cp -r ./hardware/${HARDWARE}/${KERNEL_VERSION}/wifi/firmware/* /lib/firmware/
-
-if [ ${HARDWARE} = "raspberrypi2" ]; then
-  wget https://github.com/porjo/mt7601/raw/master/src/mcu/bin/MT7601.bin -O /lib/firmware/mt7601u.bin
-fi
-
-if [ ${HARDWARE} = "orangepipc" ]; then
-  echo "Disabling old 8188eu modules"
-  mkdir /lib/modules-disabled
-  mv /lib/modules/${KERNEL_VERSION}/kernel/drivers/net/wireless/rtl8188eu /lib/modules-disabled/
-fi
+cp -r ./hardware/${HARDWARE}/wifi/etc/* /etc/
+cp -r ./hardware/${HARDWARE}/wifi/firmware/* /lib/firmware/
 
 depmod -a
 
