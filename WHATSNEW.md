@@ -2,14 +2,21 @@
 
 * Raspberry Pi 1 and Raspberry Pi 2 platforms supported
 * Critical issue with Realtek 8188 firmware resolved - moved to correct folder
+* Added haveged daemon to solve entropy issues and 
 * Pug in WebUI updated to latest version from npmjs.org
 * Overall code cleanup and refactoring
 
-## Fixing firmware issue
+## Manual adding of haveged daemon
 
-1. Login to your device as root
+1. Login to your device as root.
+2. `apt-get install haveged`
+3. Reboot.
+
+## Fixing firmware issue (previous releases)
+
+1. Login to your device as root.
 2. `mv /lib/firmware/rtl8188eufw.bin /lib/firmware/rtlwifi/rtl8188eufw.bin`
-3. Reboot. Speed of access point should increase dramatically
+3. Reboot. Speed of access point should increase dramatically.
 
 # Changes for 15-04-2016:
 * WebUI updated to 0.2.0
