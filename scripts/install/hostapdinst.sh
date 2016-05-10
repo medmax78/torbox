@@ -2,8 +2,8 @@
 . ./config.inc
 
 echo "Installing hostapd..."
-apt-get update -y
-apt-get install -y haveged
+apt-get update -y >/dev/null
+apt-get install -y haveged >/dev/null
 
 if [ ${HARDWARE} = "orangepipc" ]  || [ ${HARDWARE} = "raspberrypi2" ]; then
   tar -xzvf ./hostapd/hostapd_arm.tar.gz -C /usr/local/bin
