@@ -1,10 +1,10 @@
 # Changes for 10-05-2016:
 
-* Raspberry Pi 1 and Raspberry Pi 2 platforms supported
-* Critical issue with Realtek 8188 firmware resolved - moved to correct folder
-* Added haveged daemon to solve entropy issues and 
-* Pug in WebUI updated to latest version from npmjs.org
-* Overall code cleanup and refactoring
+* Raspberry Pi 1 and Raspberry Pi 2 platforms supported.
+* Critical issue with Realtek 8188 firmware resolved - moved to correct folder.
+* Added haveged daemon to solve entropy issues and increase SoftAP speed/reliablilty.
+* Pug in WebUI updated to latest version from npmjs.org.
+* Overall code cleanup and refactoring.
 
 ## Manual adding of haveged daemon
 
