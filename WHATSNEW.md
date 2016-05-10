@@ -1,3 +1,16 @@
+# Changes for 10-05-2016:
+
+* Raspberry Pi 1 and Raspberry Pi 2 platforms supported
+* Critical issue with Realtek 8188 firmware resolved - moved to correct folder
+* Pug in WebUI updated to latest version from npmjs.org
+* Overall code cleanup and refactoring
+
+## Fixing firmware issue
+
+1. Login to your device as root
+2. `mv /lib/firmware/rtl8188eufw.bin /lib/firmware/rtlwifi/rtl8188eufw.bin`
+3. Reboot. Speed of access point should increase dramatically
+
 # Changes for 15-04-2016:
 * WebUI updated to 0.2.0
     * Jade->Pug migrated
