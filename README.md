@@ -178,7 +178,7 @@ Minibian (https://minibianpi.wordpress.com) with some updates is used for Raspbe
 
 Drivers bundled:
 
-* Realtek 8188eu - https://github.com/lwfinger/rtl8188eu (native staging driver for Raspberry Pi)
+* Realtek 8188eu - https://github.com/lwfinger/rtl8188eu (native staging driver is used for Raspberry Pi)
 * Mediatek 7601 AP mode - https://github.com/eywalink/mt7601u (not for Raspberry Pi boards)
 
 ## Disclaimer
