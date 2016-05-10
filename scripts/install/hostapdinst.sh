@@ -5,11 +5,11 @@ echo "Installing hostapd..."
 apt-get update -y
 apt-get install -y haveged
 
-if [ ${HARDWARE} = "orangepipc" ]; then
+if [ ${HARDWARE} = "orangepipc" ]  || [ ${HARDWARE} = "raspberrypi2" ]; then
   tar -xzvf ./hostapd/hostapd_arm.tar.gz -C /usr/local/bin
 fi
 
-if [ ${HARDWARE} = "raspberrypi2" ]; then
+if [ ${HARDWARE} = "raspberrypi1" ]; then
   tar -xzvf ./hostapd/hostapd_pi_arm6.tar.gz -C /usr/local/bin
 fi
 
