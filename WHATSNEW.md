@@ -1,4 +1,4 @@
-# Changes for 10-05-2016:
+# Changes for 14-05-2016:
 
 * Raspberry Pi 1 and Raspberry Pi 2 platforms supported.
 * Critical issue with Realtek 8188 firmware resolved - moved to correct folder.
