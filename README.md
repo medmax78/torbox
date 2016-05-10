@@ -14,29 +14,45 @@ implemented, as long as I'll get my hands on this hardware.
 
 Currently supported hardware platforms:
 
-|Board|Hardware target name |
-|:---|:---|
+|Board|Hardware target name |Remarks|
+|:---|:---|:---|
 |Orange Pi PC|orangepipc|
 |Orange Pi One|orangepipc|
+|Raspberry Pi 1 (armv6)|raspberrypi1|Only Realtek WiFi is supported|
+|Raspberry Pi 2 (armv7)|raspberrypi2|Only Realtek WiFi is supported|
+
 
 ## Hardware requirements
 ### Media preparation
 #### Pre-made image
+##### For Orange Pi PC and Orange Pi One
 Base image is build of OrangePI PC (AllWinner H3) with a modified Loboris kernel.
+##### For Raspberry Pi 1 and Raspberry Pi 2
+Base image is derived from Mininian Image (https://minibianpi.wordpress.com/) - it resized to 2GB and swap partition added. 
+
 It requires 2GB microSD card.
 
 _Different manufacturers use diffrent "2GB" size interpretation. In case you receive
 "out of space" error, change manufacturer or use 4GB card. They are cheap._
 
 Prepared image can be downloaded here:
+##### For Orange Pi PC and Orange Pi One
 http://znoxx.me/cgi-bin/url.cgi?1Y4dQxp
+
+##### For Raspberry Pi 1 and Raspberry Pi 2
+http://znoxx.me/cgi-bin/url.cgi?1ZBXVXV
 
 Unpack it and "dd" to your microSD. Or use Win32DiskImager to write unpacked image on
 Windows-based systems.
+##### For Orange Pi PC and Orange Pi One
 Mount first VFAT partition (or just re-insert your card on Windows) and copy your
 hardware-script.bin to script.bin.
 
 Initial image is targeted for Orange Pi PC. If you want to use it with Orange Pi One, you __have to__ do this. 
+
+##### For Raspberry Pi 1 and Raspberry Pi 2
+No additional actions needed - just boot your device
+
 
 #### Other images
 You can adapt your own image, you use.
@@ -54,7 +70,7 @@ I decided to suppport cheapest dongles "out of the box", which can run in AP mod
 
 * 0bda:0179 Realtek Semiconductor Corp. RTL8188ETV Wireless LAN 802.11n Network Adapter (http://znoxx.me/cgi-bin/url.cgi?1qZe7Yl)
 * 0bda:8179 Realtek Semiconductor Corp. RTL8188EUS 802.11n Wireless Network Adapter (http://znoxx.me/cgi-bin/rurl.cgi?1UYTCqW)
-* 148f:7601 Ralink Technology, Corp. MT7601U Wireless Adapter (http://znoxx.me/cgi-bin/rurl.cgi?1R2y3op)
+* 148f:7601 Ralink Technology, Corp. MT7601U Wireless Adapter (http://znoxx.me/cgi-bin/rurl.cgi?1R2y3op) **NOT SUPPORTED IN RASPBERRY PI VERSIONS**
 
 However, it's not a "final" list. Other dongles are supported too, just make sure they can run with hostapd driver __"nl80211"__ or __"rtl871xdrv"__. Or even without hostapd, like listed Ralink/MTK one.
 
@@ -74,7 +90,7 @@ Now adjust __config.inc__ to your needs.
 
 What to tweak:
 
-* USER - if you use "orangepi" user, better leave it. If you use your own - change the name.
+* USER - For Orange Pi PC and Orange Pi One if you use "orangepi" user, better leave it. Same for "pi" user on Raspberry. If you use your own - change the name.
 * SSID_NAME - name of your future WiFi.
 * SSID_PASSWORD - WiFi password
 * IP_xxx and DHCP_xxx- things that will go to interface file. If you have special requirements for IP to use, change them
@@ -130,6 +146,7 @@ From this moment, you can only SSH your system via IP_ADDRESS:22 when you are co
 Bundled MediaTek/Ralink driver DOES NOT use hostapd to provide an access point. So if you want to change AP settings - change them in appropriate place. For Mediatek - in driver settings. For others - /etc/hostapd/hostapd.conf. During the install they are applied in both.
 So if your dongle is Mediatek - hostapd silently fails on start, but you still do have an access point via driver.
 For other dongles - hostapd is used.
+For Raspberry Pi 1 and 2  - **Realtek is only supported**. In future - Raspberry Pi 3 _probably_ will use onboard WiFi. 
 
 ## Using other WiFi dongles
 
@@ -140,11 +157,14 @@ To use some other WiFi adapters, keep in mind following:
 * Better to rename your interface to wlan0 to make things running smoothly
 
 I've tested some TP-Link drivers successfully, so no limitations here.
+
+
+##### For OrangePi PC and Orange Pi One
 _Beware, that installer script moves some Realtek default drivers to /lib/modules-disabled_. Better to check this dir, when you run into a problem with a WiFi dongle.
 
 ## Using other plarforms
-Support of raspberry pi (2) is planned. It's only a matter of time.
-Generally in "hardware" folder there should be subfolder "raspberrypi2" for example with some platform/kernel specific things like drivers and scripts, reporting temperature.
+Support of Raspberry Pi 3 is planned, as soon as it will be obtained somewhere.
+Generally in "hardware" folder there should be subfolder "raspberrypi3" for example with some platform/kernel specific things like drivers and scripts, reporting temperature.
 _powersave.sh_ is generated with a help of powertop.
 
 ## Thanks and references
@@ -154,10 +174,12 @@ Thanks to bronco for fixing temperature issues on OrangePi http://www.orangepi.o
 
 Original hostapd http://w1.fi/hostapd/  with Realtek patch https://github.com/pritambaral/hostapd-rtl871xdrv used in system and build for ARM arch.
 
+Minibian (https://minibianpi.wordpress.com) with some updates is used for Raspberry Pi images.
+
 Drivers bundled:
 
-* Realtek 8188eu - https://github.com/lwfinger/rtl8188eu
-* Mediatek 7601 AP mode - https://github.com/eywalink/mt7601u
+* Realtek 8188eu - https://github.com/lwfinger/rtl8188eu (native staging driver for Raspberry Pi)
+* Mediatek 7601 AP mode - https://github.com/eywalink/mt7601u (not for Raspberry Pi boards)
 
 ## Disclaimer
 Things to keep in mind
