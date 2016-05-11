@@ -3,7 +3,7 @@ This project is a  set of installer scripts, which will allow to setup
 anonymizing TOR middlebox and I2p proxy quickly and easily.
 
 ## System requirements
-Current version is targeted on OrangePI H3 hardware and assumes the following:
+Current version is targeted on OrangePI H3 hardware, Raspberry Pi 1 and 2 hardware and assumes the following:
 
 * You run Debian-based OS
 * You own compatible USB wifi dongle (see list below)
