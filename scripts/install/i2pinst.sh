@@ -16,6 +16,7 @@ expect "press 1 to continue, 2 to quit, 3 to redisplay\r" { send "1\r"}
 expect "*Console installation done*" {send "\r"} 
 EOF
 chown -R ${I2P_USER} ${I2P_LOCATION}
+chmod a+x ${I2P_LOCATION}/*.sh
 mkdir unpackedjar
 mv ${I2P_LOCATION}/lib/jbigi.jar ./unpackedjar
 cd unpackedjar
