@@ -9,7 +9,7 @@ sed -i "s~I2P_LOCATION=/opt/i2p~I2P_LOCATION=${I2P_LOCATION}~" /usr/local/bin/st
 wget -t0 -c ${I2PURL}
 mkdir ${I2P_LOCATION}
 expect <<EOF
-set timeout=60
+set timeout 60
 spawn  java -jar ${I2PJAR} -console
 expect "press 1 to continue, 2 to quit, 3 to redisplay" { send "1\r" }
 expect "Select target path*\r" {send "${I2P_LOCATION}\r"}
