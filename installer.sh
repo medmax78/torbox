@@ -38,7 +38,7 @@ echo "Installing Java 8 for ARM..."
 
 
 ##
-echo "Installing i2p.."
+echo "Installing i2p..."
 ./scripts/install/i2pinst.sh
 
 ##
