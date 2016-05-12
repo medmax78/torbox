@@ -76,6 +76,9 @@ However, it's not a "final" list. Other dongles are supported too, just make sur
 
 ## Starting the installation
 Boot in your freshly prepared SD-card.
+
+Login for OrangePI is orangepi/orangepi, for Raspberry Pi - pi/raspberry.
+
 Login via ssh and run following commands:
 
 * `sudo apt-get update`
