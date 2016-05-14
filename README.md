@@ -2,6 +2,8 @@
 This project is a  set of installer scripts, which will allow to setup
 anonymizing TOR middlebox and I2p proxy quickly and easily.
 
+[Russian Description/Описание на русском](http://znoxx.me/tor-i2p-middlebox/)
+
 ## System requirements
 Current version is targeted on OrangePI H3 hardware, Raspberry Pi 1 and 2 hardware and assumes the following:
 
