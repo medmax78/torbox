@@ -1,3 +1,7 @@
+# Changes for 25-06-2016
+
+* i2p updated to version 0.9.26
+
 # Changes for 14-05-2016:
 
 * Raspberry Pi 1 and Raspberry Pi 2 platforms supported.
