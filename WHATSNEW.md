@@ -1,3 +1,8 @@
+# Changes for 07-08-2016
+
+* Added new hardware target - Raspberry Pi 3
+* Node.js for ARMv7+ repo updated to 6.x version
+
 # Changes for 25-06-2016
 
 * i2p updated to version 0.9.26
