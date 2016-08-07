@@ -1,9 +1,9 @@
 #!/bin/sh
 . ./config.inc
 
-if [ ${HARDWARE} = "orangepipc" ]  || [ ${HARDWARE} = "raspberrypi2" ]; then
+if [ ${HARDWARE} = "orangepipc" ]  || [ ${HARDWARE} = "raspberrypi2" ] || [ ${HARDWARE} = "raspberrypi3" ]; then
   apt-get -y install curl > /dev/null
-  curl --silent --location https://deb.nodesource.com/setup_5.x | sudo bash -
+  curl --silent --location https://deb.nodesource.com/setup_6.x | sudo bash -
   apt-get -y install nodejs > /dev/null
 fi
 

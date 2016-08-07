@@ -7,6 +7,11 @@ echo "Setting network rules to rename all wireless interfaces to wlan0..."
 
 cp ./scripts/etc/udev/rules.d/70-persistent-net.rules /etc/udev/rules.d/70-persistent-net.rules
 
+if [ ${HARDWARE} = "raspberrypi3" ]; then
+  apt-get update
+  apt-get -y install firmware-brcm80211 
+fi
+
 echo "Setting wlan0 interface..."
 
 echo "auto wlan0" >>/etc/network/interfaces.d/wlan0
