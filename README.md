@@ -5,14 +5,13 @@ anonymizing TOR middlebox and I2p proxy quickly and easily.
 [Russian Description/Описание на русском](http://znoxx.me/tor-i2p-middlebox/)
 
 ## System requirements
-Current version is targeted on OrangePI H3 hardware, Raspberry Pi 1 and 2 hardware and assumes the following:
+Current version is targeted for some OrangePI H3 hardware (Orange Pi PC, Orange Pi One), Raspberry Pi 1,2 and 3 hardware and assumes the following:
 
 * You run Debian-based OS
 * You own compatible USB wifi dongle (see list below)
 * Your "Internets" are connected via Ethernet cable and DHCP is possible for eth0 wired interface
 
-Raspberry  support is planned and will be
-implemented, as long as I'll get my hands on this hardware.
+There are still some new Orange Pi's to support, but this may be seriously postponed for some "vNext" version with major improvements. 
 
 Currently supported hardware platforms:
 
@@ -22,6 +21,7 @@ Currently supported hardware platforms:
 |Orange Pi One|orangepipc|
 |Raspberry Pi 1 (armv6)|raspberrypi1|Only Realtek WiFi is supported|
 |Raspberry Pi 2 (armv7)|raspberrypi2|Only Realtek WiFi is supported|
+|Raspberry Pi 3 (in armv7 mode)|raspberrypi3|Native RPI 3 WiFi only - no external dongle needed|
 
 
 ## Hardware requirements
@@ -29,7 +29,7 @@ Currently supported hardware platforms:
 #### Pre-made image
 ##### For Orange Pi PC and Orange Pi One
 Base image is build of OrangePI PC (AllWinner H3) with a modified Loboris kernel.
-##### For Raspberry Pi 1 and Raspberry Pi 2
+##### For Raspberry Pi 1, Raspberry Pi 2 and Raspberry Pi 3
 Base image is derived from Mininian Image (https://minibianpi.wordpress.com/) - it resized to 2GB and swap partition added. 
 
 It requires 2GB microSD card.
@@ -41,7 +41,7 @@ Prepared image can be downloaded here:
 ##### For Orange Pi PC and Orange Pi One
 http://znoxx.me/cgi-bin/url.cgi?1Y4dQxp
 
-##### For Raspberry Pi 1 and Raspberry Pi 2
+##### For Raspberry Pi 1, Raspberry Pi 2 and Raspberry Pi 3
 http://znoxx.me/cgi-bin/url.cgi?1ZBXVXV
 
 Unpack it and "dd" to your microSD. Or use Win32DiskImager to write unpacked image on
@@ -52,7 +52,7 @@ hardware-script.bin to script.bin.
 
 Initial image is targeted for Orange Pi PC. If you want to use it with Orange Pi One, you __have to__ do this. 
 
-##### For Raspberry Pi 1 and Raspberry Pi 2
+##### For Raspberry Pi 1, Raspberry Pi 2 and Raspberry Pi 3
 No additional actions needed - just boot your device
 
 
@@ -73,6 +73,7 @@ I decided to suppport cheapest dongles "out of the box", which can run in AP mod
 * 0bda:0179 Realtek Semiconductor Corp. RTL8188ETV Wireless LAN 802.11n Network Adapter (http://znoxx.me/cgi-bin/url.cgi?1qZe7Yl)
 * 0bda:8179 Realtek Semiconductor Corp. RTL8188EUS 802.11n Wireless Network Adapter (http://znoxx.me/cgi-bin/rurl.cgi?1UYTCqW)
 * 148f:7601 Ralink Technology, Corp. MT7601U Wireless Adapter (http://znoxx.me/cgi-bin/rurl.cgi?1R2y3op) **NOT SUPPORTED IN RASPBERRY PI VERSIONS**
+* Onboard Raspberry Pi 3 Wifi (Broadcom)
 
 However, it's not a "final" list. Other dongles are supported too, just make sure they can run with hostapd driver __"nl80211"__ or __"rtl871xdrv"__. Or even without hostapd, like listed Ralink/MTK one.
 
@@ -151,7 +152,8 @@ From this moment, you can only SSH your system via IP_ADDRESS:22 when you are co
 Bundled MediaTek/Ralink driver DOES NOT use hostapd to provide an access point. So if you want to change AP settings - change them in appropriate place. For Mediatek - in driver settings. For others - /etc/hostapd/hostapd.conf. During the install they are applied in both.
 So if your dongle is Mediatek - hostapd silently fails on start, but you still do have an access point via driver.
 For other dongles - hostapd is used.
-For Raspberry Pi 1 and 2  - **Realtek is only supported**. In future - Raspberry Pi 3 _probably_ will use onboard WiFi. 
+For Raspberry Pi 1 and 2  - **Realtek is only supported**. 
+For Raspberry Pi 3 - onboard Broadcom **only**. You still can support Realtek like it done for Rpi2, check script internals.
 
 ## Using other WiFi dongles
 
@@ -168,9 +170,7 @@ I've tested some TP-Link drivers successfully, so no limitations here.
 _Beware, that installer script moves some Realtek default drivers to /lib/modules-disabled_. Better to check this dir, when you run into a problem with a WiFi dongle.
 
 ## Using other plarforms
-Support of Raspberry Pi 3 is planned, as soon as it will be obtained somewhere.
-Generally in "hardware" folder there should be subfolder "raspberrypi3" for example with some platform/kernel specific things like drivers and scripts, reporting temperature.
-_powersave.sh_ is generated with a help of powertop.
+Generally, you need to create new hardware target and compile nescessary hardware drivers.
 
 ## Thanks and references
 Thanks to Loboris for providing working and stable kernels for OrangepPI http://www.orangepi.org/orangepibbsen/forum.php?mod=viewthread&tid=342
