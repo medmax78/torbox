@@ -2,6 +2,12 @@
 This project is a  set of installer scripts, which will allow to setup
 anonymizing TOR middlebox and I2p proxy quickly and easily.
 
+After installation your \*Pi device will get functionality of Access Point, which *clients* will connect to Internet through TOR completely. It supports 3 modes of 
+operation: "all through TOR", "all through TOR+Privoxy (configurable web proxy with ads cutter)" and "direct mode". Also device will allow to run I2P daemon and
+access .i2p sites. In this case you have to setup http-proxy on your device.
+
+End-user devices ( Access Point clients) do not need TOR bundle to be installed - they work fully transparent via your new Access Point.
+
 [Russian Description/Описание на русском](http://znoxx.me/tor-i2p-middlebox/)
 
 ## System requirements
