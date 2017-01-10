@@ -1,7 +1,7 @@
 #!/bin/sh
 . ./config.inc
-I2PURL=http://download.i2p2.de/releases/0.9.26/i2pinstall_0.9.26.jar
-I2PJAR=i2pinstall_0.9.26.jar
+I2PURL=http://download.i2p2.de/releases/0.9.27/i2pinstall_0.9.27.jar
+I2PJAR=i2pinstall_0.9.27.jar
 
 apt-get update > /dev/null
 apt-get -y install unzip expect > /dev/null
