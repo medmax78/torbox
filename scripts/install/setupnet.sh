@@ -13,11 +13,11 @@ if [ ${HARDWARE} = "raspberrypi3" ]; then
 fi
 
 echo "Setting wlan0 interface..."
-WLANFILE  = /etc/network/interdaces.d/wlan0
+WLANFILE  = "/etc/network/interfaces.d/wlan0"
 
 if [ ${HARDWARE} = "orangepi0" ]; then
 ###Armbian workaround
-  WLANFILE = /etc/network/interfaces
+  WLANFILE = "/etc/network/interfaces"
 fi
 echo "auto wlan0" >>${WLANFILE}
 echo "iface wlan0 inet static" >>${WLANFILE}
