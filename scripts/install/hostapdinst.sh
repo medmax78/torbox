@@ -5,6 +5,10 @@ echo "Installing hostapd..."
 apt-get update -y >/dev/null
 apt-get install -y haveged >/dev/null
 
+if [ ${HARDWARE} = "orangepi0" ]; then
+  apt-get -y purge hostapd >/dev/null
+fi
+
 if [ ${HARDWARE} = "raspberrypi1" ]; then
   tar -xzvf ./hostapd/hostapd_pi_arm6.tar.gz -C /usr/local/bin
 else 
