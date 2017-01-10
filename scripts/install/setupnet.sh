@@ -19,6 +19,7 @@ if [ ${HARDWARE} = "orangepi0" ]; then
 ###Armbian workaround
   WLANFILE="/etc/network/interfaces"
 fi
+echo "##wlan0 autoadded by torbox installer" >>${WLANFILE}
 echo "auto wlan0" >>${WLANFILE}
 echo "iface wlan0 inet static" >>${WLANFILE}
 echo "       address $IP_ADDRESS" >>${WLANFILE}
