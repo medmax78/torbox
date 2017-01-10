@@ -25,6 +25,7 @@ Currently supported hardware platforms:
 |:---|:---|:---|
 |Orange Pi PC|orangepipc|
 |Orange Pi One|orangepipc|
+|Orange Pi Zero|orangepi0|
 |Raspberry Pi 1 (armv6)|raspberrypi1|Only Realtek WiFi is supported|
 |Raspberry Pi 2 (armv7)|raspberrypi2|Only Realtek WiFi is supported|
 |Raspberry Pi 3 (in armv7 mode)|raspberrypi3|Native RPI 3 WiFi only - no external dongle needed|
@@ -35,6 +36,8 @@ Currently supported hardware platforms:
 #### Pre-made image
 ##### For Orange Pi PC and Orange Pi One
 Base image is build of OrangePI PC (AllWinner H3) with a modified Loboris kernel.
+##### For Orange Pi Zero
+Base image is Armbian 5.24. Standart update procedure should work correctly. Actual version is tested on 256MB board, so 512MB version should work ok also.
 ##### For Raspberry Pi 1, Raspberry Pi 2 and Raspberry Pi 3
 Base image is derived from Mininian Image (https://minibianpi.wordpress.com/) - it resized to 2GB and swap partition added. 
 
@@ -58,7 +61,7 @@ hardware-script.bin to script.bin.
 
 Initial image is targeted for Orange Pi PC. If you want to use it with Orange Pi One, you __have to__ do this. 
 
-##### For Raspberry Pi 1, Raspberry Pi 2 and Raspberry Pi 3
+##### For Raspberry Pi 1,2,3 and Orange Pi Zero
 No additional actions needed - just boot your device
 
 
@@ -80,6 +83,7 @@ I decided to suppport cheapest dongles "out of the box", which can run in AP mod
 * 0bda:8179 Realtek Semiconductor Corp. RTL8188EUS 802.11n Wireless Network Adapter (http://znoxx.me/cgi-bin/rurl.cgi?1UYTCqW)
 * 148f:7601 Ralink Technology, Corp. MT7601U Wireless Adapter (http://znoxx.me/cgi-bin/rurl.cgi?1R2y3op) **NOT SUPPORTED IN RASPBERRY PI VERSIONS**
 * Onboard Raspberry Pi 3 Wifi (Broadcom)
+* Onboard Orange Pi Zero (AllWinner ?)
 
 However, it's not a "final" list. Other dongles are supported too, just make sure they can run with hostapd driver __"nl80211"__ or __"rtl871xdrv"__. Or even without hostapd, like listed Ralink/MTK one.
 
@@ -158,6 +162,7 @@ From this moment, you can only SSH your system via IP_ADDRESS:22 when you are co
 Bundled MediaTek/Ralink driver DOES NOT use hostapd to provide an access point. So if you want to change AP settings - change them in appropriate place. For Mediatek - in driver settings. For others - /etc/hostapd/hostapd.conf. During the install they are applied in both.
 So if your dongle is Mediatek - hostapd silently fails on start, but you still do have an access point via driver.
 For other dongles - hostapd is used.
+For Orange Pi Zero - onboard WiFi chip **only**. Realtek dongle also can be used, depends on driver availability.
 For Raspberry Pi 1 and 2  - **Realtek is only supported**. 
 For Raspberry Pi 3 - onboard Broadcom **only**. You still can support Realtek like it done for Rpi2, check script internals.
 
