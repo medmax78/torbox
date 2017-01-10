@@ -13,13 +13,17 @@ if [ ${HARDWARE} = "raspberrypi3" ]; then
 fi
 
 echo "Setting wlan0 interface..."
+WLANFILE  = "/etc/network/interdaces.d/wlan0"
 
-echo "auto wlan0" >>/etc/network/interfaces.d/wlan0
-echo "iface wlan0 inet static" >>/etc/network/interfaces.d/wlan0
-echo "       address $IP_ADDRESS" >>/etc/network/interfaces.d/wlan0
-echo "       netmask $IP_NETMASK" >>/etc/network/interfaces.d/wlan0
-echo "       network $IP_NETWORK" >>/etc/network/interfaces.d/wlan0
-echo "       broadcast $IP_BROADCAST" >>/etc/network/interfaces.d/wlan0
+if [ ${HARDWARE} = "orangepi0" ]; then
+  WLANFILE = "/etc/network/interfaces"
+fi
+echo "auto wlan0" >>${WLANFILE}
+echo "iface wlan0 inet static" >>${WLANFILE}
+echo "       address $IP_ADDRESS" >>${WLANFILE}
+echo "       netmask $IP_NETMASK" >>${WLANFILE}
+echo "       network $IP_NETWORK" >>${WLANFILE}
+echo "       broadcast $IP_BROADCAST" >>${WLANFILE}
 
 apt-get update > /dev/null
 apt-get -y install iptables > /dev/null
