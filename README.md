@@ -25,7 +25,7 @@ Currently supported hardware platforms:
 |:---|:---|:---|
 |Orange Pi PC|orangepipc|
 |Orange Pi One|orangepipc|
-|Orange Pi Zero|orangepi0|
+|Orange Pi Zero|orangepi0|Only built-in wifi supported|
 |Raspberry Pi 1 (armv6)|raspberrypi1|Only Realtek WiFi is supported|
 |Raspberry Pi 2 (armv7)|raspberrypi2|Only Realtek WiFi is supported|
 |Raspberry Pi 3 (in armv7 mode)|raspberrypi3|Native RPI 3 WiFi only - no external dongle needed|
