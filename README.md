@@ -50,7 +50,7 @@ Prepared image can be downloaded here:
 ##### For Orange Pi PC and Orange Pi One
 http://znoxx.me/cgi-bin/url.cgi?1Y4dQxp
 
-##### For Orange Pi PC and Orange Pi Zero
+##### For Orange Pi Zero
 http://znoxx.me/cgi-bin/url.cgi?2jjcGns
 
 ##### For Raspberry Pi 1, Raspberry Pi 2 and Raspberry Pi 3
