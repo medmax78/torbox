@@ -48,10 +48,10 @@ _Different manufacturers use diffrent "2GB" size interpretation. In case you rec
 
 Prepared image can be downloaded here:
 ##### For Orange Pi PC and Orange Pi One
-http://znoxx.me/cgi-bin/url.cgi?1Y4dQxp
+http://znoxx.me/cgi-bin/url.cgi?2jjcGns
 
 ##### For Orange Pi Zero
-http://znoxx.me/cgi-bin/url.cgi?2jjcGns
+http://znoxx.me/cgi-bin/url.cgi?2j55knh
 
 ##### For Raspberry Pi 1, Raspberry Pi 2 and Raspberry Pi 3
 http://znoxx.me/cgi-bin/url.cgi?2jjfwJb
