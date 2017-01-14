@@ -1,4 +1,4 @@
-# Orange TorBOX
+	# Orange TorBOX
 This project is a  set of installer scripts, which will allow to setup
 anonymizing TOR middlebox and I2p proxy quickly and easily.
 
@@ -51,10 +51,10 @@ Prepared image can be downloaded here:
 http://znoxx.me/cgi-bin/url.cgi?1Y4dQxp
 
 ##### For Orange Pi PC and Orange Pi Zero
-http://znoxx.me/cgi-bin/rurl.cgi?2j55knh
+http://znoxx.me/cgi-bin/url.cgi?2jjcGns
 
 ##### For Raspberry Pi 1, Raspberry Pi 2 and Raspberry Pi 3
-http://znoxx.me/cgi-bin/url.cgi?1ZBXVXV
+http://znoxx.me/cgi-bin/url.cgi?2jjfwJb
 
 Unpack it and "dd" to your microSD. Or use Win32DiskImager to write unpacked image on
 Windows-based systems.
