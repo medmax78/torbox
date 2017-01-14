@@ -1,3 +1,10 @@
+# Changes for 15-01-2017
+
+* Added new hardware target and image link - Orange Pi Zero
+* Version of i2p software updated to 0.9.27
+* Some internal script optimizations
+
+
 # Changes for 07-08-2016
 
 * Added new hardware target - Raspberry Pi 3
