@@ -1,7 +1,7 @@
 [Service]
+Type=oneshot
 ExecStart=/usr/local/bin/starti2p.sh
 ExecStop=/usr/local/bin/stopi2p.sh
-Restart=always
 StandardOutput=syslog
 StandardError=syslog
 SyslogIdentifier=i2p-torbox
