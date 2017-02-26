@@ -1,7 +1,9 @@
 #!/bin/sh
 . ./config.inc
-I2PURL=http://download.i2p2.de/releases/0.9.28/i2pinstall_0.9.28.jar
-I2PJAR=i2pinstall_0.9.27.jar
+I2PVERSION=0.9.28
+I2PJAR=i2pinstall_${I2PVERSION}.jar
+I2PURL=http://download.i2p2.de/releases/${I2PVERSION}/i2pinstall_${I2PVERSION}.jar
+
 
 apt-get -y install unzip expect > /dev/null
 sed -i "s~I2P_LOCATION=/opt/i2p~I2P_LOCATION=${I2P_LOCATION}~" /usr/local/bin/starti2p.sh
@@ -32,7 +34,7 @@ su -c "sed -i 's/clientApp.4.startOnLoad=true/clientApp.4.startOnLoad=false/'  /
 su -c "/usr/local/bin/starti2p.sh" ${I2P_USER}
 rm -rf ./$I2PJAR
 cp ./scripts/etc/systemd/system/i2p-torbox.service /etc/systemd/system/i2p-torbox.service
-sed -i "s/I2PUSER/{I2P_USER}/" /etc/systemd/system/i2p-torbox.service
+sed -i "s/I2PUSER/${I2P_USER}/" /etc/systemd/system/i2p-torbox.service
 sed -i "s~I2P_LOCATION=/opt/i2p~I2P_LOCATION=${I2P_LOCATION}~" /usr/local/bin/starti2p.sh
 systemctl daemon-reload
 systemctl enable i2p-torbox
