@@ -42,5 +42,6 @@ systemctl start i2p-torbox
 echo "Sleeping for 30 seconds to let i2p start/settle..."
 sleep 30
 systemctl stop i2p-torbox
+systemctl disable i2p-torbox
 echo "I2P installation finised, hopefully without errors..."
 
