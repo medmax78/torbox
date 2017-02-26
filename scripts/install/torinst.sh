@@ -9,17 +9,10 @@ apt-get -y purge deb.torproject.org-keyring > /dev/null
 if [ ${USE_STOCK_TOR} = "1" ]; then
    #### This part is for installing stock tor
    echo "Installing stock tor..."
-   rm /etc/apt/sources.list.d/tor-repo.list
-   apt-get update > /dev/null
    apt-get -y install tor > /dev/null  
 else
    ####This part is for installing from tor offical repo.
    echo "Installing tor from torproject repo..."
-   echo "deb http://deb.torproject.org/torproject.org jessie main" | tee /etc/apt/sources.list.d/tor-repo.list
-   echo "deb-src http://deb.torproject.org/torproject.org jessie main" | tee -a /etc/apt/sources.list.d/tor-repo.list
-   gpg --keyserver keys.gnupg.net --recv 886DDD89
-   gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -
-   apt-get update > /dev/null
    apt-get -y install tor deb.torproject.org-keyring > /dev/null
 fi
 

@@ -1,4 +1,4 @@
-## for now - orange pi is supported.
+## Supported hardware targets: orangepipc (also for orangepi one),orangepi0,raspberrypi1,raspberrypi2,raspberrypi3.
 HARDWARE=orangepipc
 ## Put your hostname here
 HOSTNAME=OrangePi

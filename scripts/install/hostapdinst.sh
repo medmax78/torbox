@@ -2,7 +2,6 @@
 . ./config.inc
 
 echo "Installing hostapd..."
-apt-get update -y >/dev/null
 apt-get install -y haveged >/dev/null
 
 if [ ${HARDWARE} = "orangepi0" ]; then

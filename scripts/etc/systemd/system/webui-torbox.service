@@ -1,11 +1,11 @@
 [Service]
-ExecStart=/usr/bin/node /opt/webui/bin/www
+ExecStart=/usr/bin/node WEBUI_ROOT/bin/www
 Restart=always
 StandardOutput=syslog
 StandardError=syslog
 SyslogIdentifier=webui-torbox
-User=webui
-Group=webui
+User=WEBUI_USER
+Group=WEBUI_GROUP
 Environment=NODE_ENV=production
 
 [Install]

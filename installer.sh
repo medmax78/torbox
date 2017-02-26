@@ -25,6 +25,10 @@ if [ -f /usr/local/bin/powersave.sh ]; then
 fi
 
 ##
+echo "Setting up repositories..."
+./scriprs/install/setuprepos.sh
+
+##
 echo "Installing tor..."
 ./scripts/install/torinst.sh
 

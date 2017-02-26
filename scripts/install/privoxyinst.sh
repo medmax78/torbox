@@ -1,7 +1,6 @@
 #!/bin/sh
 apt-get -y remove privoxy > /dev/null
 apt-get -y clean privoxy > /dev/null
-apt-get update > /dev/null
 apt-get -y install privoxy > /dev/null
 echo "Configuring privoxy..."
 /etc/init.d/privoxy stop

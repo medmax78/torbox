@@ -8,7 +8,6 @@ echo "Setting network rules to rename all wireless interfaces to wlan0..."
 cp ./scripts/etc/udev/rules.d/70-persistent-net.rules /etc/udev/rules.d/70-persistent-net.rules
 
 if [ ${HARDWARE} = "raspberrypi3" ]; then
-  apt-get update >/dev/null
   apt-get -y install firmware-brcm80211 >/dev/null
 fi
 
@@ -27,7 +26,7 @@ echo "       netmask $IP_NETMASK" >>${WLANFILE}
 echo "       network $IP_NETWORK" >>${WLANFILE}
 echo "       broadcast $IP_BROADCAST" >>${WLANFILE}
 
-apt-get update > /dev/null
+
 apt-get -y install iptables > /dev/null
 apt-get -y remove dnsmasq > /dev/null
 apt-get -y purge dnsmasq > /dev/null
