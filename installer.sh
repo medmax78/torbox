@@ -26,7 +26,7 @@ fi
 
 ##
 echo "Setting up repositories..."
-./scriprs/install/setuprepos.sh
+./scripts/install/setuprepos.sh
 
 ##
 echo "Installing tor..."
