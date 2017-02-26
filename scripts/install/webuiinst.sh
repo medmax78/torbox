@@ -45,7 +45,6 @@ sed -i "s/WEBUI_USER/${WEBUI_USER}/" /etc/systemd/system/webui-torbox.service
 
 systemctl daemon-reload
 systemctl enable webui-torbox
-
 systemctl start webui-torbox
 sync
 
