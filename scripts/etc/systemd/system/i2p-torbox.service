@@ -1,12 +1,10 @@
+[Unit]
+Description=I2P for TorBOX
 [Service]
-Type=oneshot
-ExecStart=/usr/local/bin/starti2p.sh
-ExecStop=/usr/local/bin/stopi2p.sh
-StandardOutput=syslog
-StandardError=syslog
-SyslogIdentifier=i2p-torbox
+ExecStart=I2PLOCATION/runplain.sh
 User=I2PUSER
 Group=I2PUSER
+Type=forking
 
 [Install]
 WantedBy=multi-user.target

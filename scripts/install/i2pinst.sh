@@ -35,7 +35,7 @@ su -c "/usr/local/bin/starti2p.sh" ${I2P_USER}
 rm -rf ./$I2PJAR
 cp ./scripts/etc/systemd/system/i2p-torbox.service /etc/systemd/system/i2p-torbox.service
 sed -i "s/I2PUSER/${I2P_USER}/" /etc/systemd/system/i2p-torbox.service
-sed -i "s~I2P_LOCATION=/opt/i2p~I2P_LOCATION=${I2P_LOCATION}~" /usr/local/bin/starti2p.sh
+sed -i "s~I2PLOCATION~${I2P_LOCATION}~" /etc/systemd/system/i2p-torbox.service
 systemctl daemon-reload
 systemctl enable i2p-torbox
 systemctl start i2p-torbox
