@@ -31,14 +31,13 @@ su -c "sed -i 's/clientApp.0.args=7657\s*::1,127.0.0.1\s*.\/webapps\//clientApp.
 su -c "sed -i 's/clientApp.4.startOnLoad=true/clientApp.4.startOnLoad=false/'  /home/${I2P_USER}/.i2p/clients.config" ${I2P_USER}
 su -c "/usr/local/bin/starti2p.sh" ${I2P_USER}
 rm -rf ./$I2PJAR
-cp ./scripts/etc/init.d/i2p /etc/init.d/i2p
-sed -i "s/USER=orangepi/USER=${I2P_USER}/" /etc/init.d/i2p
-sed -i "s~DAEMON=/opt/i2p/i2prouter~DAEMON=${I2P_LOCATION}/i2prouter~" /etc/init.d/i2p
-chmod a+x /etc/init.d/i2p
-update-rc.d i2p defaults
-update-rc.d i2p enable
-/etc/init.d/i2p start
+cp ./scripts/etc/systemd/system/i2p-torbox.service /etc/systemd/system/i2p-torbox.service
+sed -i "s/I2PUSER/{I2P_USER}/" /etc/systemd/system/i2p-torbox.service
+sed -i "s~I2P_LOCATION=/opt/i2p~I2P_LOCATION=${I2P_LOCATION}~" /usr/local/bin/starti2p.sh
+systemctl daemon-reload
+systemctl enable i2p-torbox
+systemctl start i2p-torbox
 echo "Sleeping for 30 seconds to let i2p start/settle..."
 sleep 30
-update-rc.d i2p disable
+systemctl stop i2p-torbox
 echo "I2P installation finised, hopefully without errors..."

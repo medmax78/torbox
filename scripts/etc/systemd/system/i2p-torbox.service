@@ -1,0 +1,12 @@
+[Service]
+ExecStart=/usr/local/bin/starti2p.sh
+ExecStop=/usr/local/bin/stopi2p.sh
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=i2p-torbox
+User=I2PUSER
+Group=I2PUSER
+
+[Install]
+WantedBy=multi-user.target

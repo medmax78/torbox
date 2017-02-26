@@ -5,5 +5,5 @@
   "strReboot": "/sbin/shutdown -r now",
   "strShutdown": "/sbin/shutdown -h now",
   "strTemperature": "/usr/local/bin/cputemp.sh",
-  "strSystemctl": "/etc/init.d"
+  "strI2PCtl": "/usr/local/bin/sysctl_i2p.sh"
 }
