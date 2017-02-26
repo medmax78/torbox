@@ -6,7 +6,6 @@ I2PURL=http://download.i2p2.de/releases/${I2PVERSION}/i2pinstall_${I2PVERSION}.j
 
 
 apt-get -y install unzip expect > /dev/null
-sed -i "s~I2P_LOCATION=/opt/i2p~I2P_LOCATION=${I2P_LOCATION}~" /usr/local/bin/starti2p.sh
 wget -t0 -c ${I2PURL}
 mkdir ${I2P_LOCATION}
 expect <<EOF
@@ -26,12 +25,6 @@ unzip jbigi.jar
 su -c "cp libjbigi-linux-armv6.so ${I2P_LOCATION}/libjbigi.so" ${I2P_USER}
 cd ..
 rm -rf unpackedjar
-su -c "/usr/local/bin/starti2p.sh" ${I2P_USER}
-sleep 20
-su -c "/usr/local/bin/stopi2p.sh" ${I2P_USER}
-su -c "sed -i 's/clientApp.0.args=7657\s*::1,127.0.0.1\s*.\/webapps\//clientApp.0.args=7657 0.0.0.0 .\/webapps\//' /home/${I2P_USER}/.i2p/clients.config" ${I2P_USER}
-su -c "sed -i 's/clientApp.4.startOnLoad=true/clientApp.4.startOnLoad=false/'  /home/${I2P_USER}/.i2p/clients.config" ${I2P_USER}
-su -c "/usr/local/bin/starti2p.sh" ${I2P_USER}
 rm -rf ./$I2PJAR
 cp ./scripts/etc/systemd/system/i2p-torbox.service /etc/systemd/system/i2p-torbox.service
 sed -i "s/I2PUSER/${I2P_USER}/" /etc/systemd/system/i2p-torbox.service
@@ -43,5 +36,7 @@ echo "Sleeping for 30 seconds to let i2p start/settle..."
 sleep 30
 systemctl stop i2p-torbox
 systemctl disable i2p-torbox
+su -c "sed -i 's/clientApp.0.args=7657\s*::1,127.0.0.1\s*.\/webapps\//clientApp.0.args=7657 0.0.0.0 .\/webapps\//' /home/${I2P_USER}/.i2p/clients.config" ${I2P_USER}
+su -c "sed -i 's/clientApp.4.startOnLoad=true/clientApp.4.startOnLoad=false/'  /home/${I2P_USER}/.i2p/clients.config" ${I2P_USER}
 echo "I2P installation finised, hopefully without errors..."
 
