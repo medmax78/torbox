@@ -1,0 +1,18 @@
+[Unit]
+Description=hostapd-torbox
+Wants=network.target
+Before=network.target
+BindsTo=sys-subsystem-net-devices-wlan0.device
+After=sys-subsystem-net-devices-wlan0.device
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/bin/hostapd-torbox -B /etc/hostapd/hostapd-torbox.conf
+
+
+ExecStop=/sbin/ip addr flush dev wlan0
+ExecStop=/sbin/ip link set dev wlan0 down
+
+[Install]
+WantedBy=multi-user.target
