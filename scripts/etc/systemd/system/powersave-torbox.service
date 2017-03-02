@@ -1,0 +1,8 @@
+[Unit]
+Description=Powersave script for TORBox
+
+[Service]
+ExecStart=/usr/local/bin/powersave.sh
+
+[Install]
+WantedBy=default.target
