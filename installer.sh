@@ -19,9 +19,9 @@ cp -r ./hardware/${HARDWARE}/usr/local/bin/* /usr/local/bin/
 
 if [ -f /usr/local/bin/powersave.sh ]; then
   echo "Setting powersave script..."
-  cp ./scripts/etc/init.d/powersave /etc/init.d/powersave
-  update-rc.d powersave defaults
-  update-rc.d powersave enable
+  cp ./scripts/etc/systemd/system/powersave-torbox.service /etc/systemd/system/powersave-torbox.service
+  systemctl daemon-reload
+  systemctl enable powersave-torbox
 fi
 
 ##
