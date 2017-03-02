@@ -13,7 +13,7 @@ End-user devices ( Access Point clients) do not need TOR bundle to be installed 
 ## System requirements
 Current version is targeted for some OrangePI H3 hardware (Orange Pi PC, Orange Pi One), Raspberry Pi 1,2 and 3 hardware and assumes the following:
 
-* You run Debian-based OS
+* You run Debian-based OS with systemd enabled/working (Debian 8+)
 * You own compatible USB wifi dongle (see list below)
 * Your "Internets" are connected via Ethernet cable and DHCP is possible for eth0 wired interface
 
