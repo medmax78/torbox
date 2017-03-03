@@ -1,3 +1,15 @@
+# Changes for 05-03-2017
+
+* Overall speedup of installer due to optimization of repository processing.
+* init.d support completely removed - everything is moved to systemd.
+* Systemd scripts and related binaries now have "-torbox" suffix to avoid conflicts with standard/other software
+* I2P updated to last version (for the time being)
+
+***NOTE: 
+
+This update is considered as last major one, next commits will be only bugfixes (critical ones) and third-party  software updates 
+(like node.js/i2p), since new version of anonymizing middlebox with much more flexible functionality is planned.
+
 # Changes for 15-01-2017
 
 * Added new hardware target and image link - Orange Pi Zero
