@@ -107,7 +107,7 @@ After everything is downloaded:
 
 Now adjust __config.inc__ to your needs.
 
-What to tweak:
+What to tweak in addition to selection of "hardware target" (see table above):
 
 * USER - For Orange Pi PC and Orange Pi One if you use "orangepi" user, better leave it. Same for "pi" user on Raspberry. If you use your own - change the name.
 * SSID_NAME - name of your future WiFi.
