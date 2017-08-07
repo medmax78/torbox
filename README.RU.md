@@ -24,6 +24,14 @@
 * У вас имеется совместимый USB WiFi адаптер (об этом ниже). 
 * Интернет подключен через Ethernet и DHCP и интерфейс сконфигурирован, как eth0.
 
+| Плата | Название Hardware Target | Примечания |
+| Orange Pi PC | orangepipc |
+| Orange Pi One | orangepipc |
+| Orange Pi Zero | orangepi0 | Поддержан только встроенный WiFi адаптер |
+| Raspberry Pi 1 (armv6) | raspberrypi1 | Поддержаны только адаптеры Realtek |
+| Raspberry Pi 2 (armv7) | raspberrypi2 | Поддержаны только адаптеры Realtek |
+| Raspberry Pi 3 (в режиме armv7) | raspberrypi3 | Поддержаны только собственный адаптер Broadcom, т.е. внешний донгл не требуется. |
+
 <table border=1>
   <tr>
     <th>Плата</th>
