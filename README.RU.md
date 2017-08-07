@@ -25,6 +25,7 @@
 * Интернет подключен через Ethernet и DHCP и интерфейс сконфигурирован, как eth0.
 
 | Плата | Название Hardware Target | Примечания |
+|-------|--------------------------|------------|
 | Orange Pi PC | orangepipc |
 | Orange Pi One | orangepipc |
 | Orange Pi Zero | orangepi0 | Поддержан только встроенный WiFi адаптер |
