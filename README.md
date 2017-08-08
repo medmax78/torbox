@@ -48,7 +48,12 @@ _Different manufacturers use diffrent "2GB" size interpretation. In case you rec
 
 Prepared image can be downloaded here:
 ##### For Orange Pi PC and Orange Pi One
-http://znoxx.me/cgi-bin/url.cgi?2jjcGns
+
+Mount first VFAT partition (or just re-insert card in Windows) to change script.bin according to your board.
+
+This image is set up for  Orange Pi PC. If you plan to use Orange Pi One - you __must__ do this operation.
+
+[![Orange Pi PC](docpics/orangepipc.png)](http://znoxx.me/cgi-bin/url.cgi?1NS4Fcm)
 
 ##### For Orange Pi Zero
 http://znoxx.me/cgi-bin/url.cgi?2j55knh
@@ -82,9 +87,17 @@ Now test it - insert SD, then power on and try to login to your system via SSH.
 
 I decided to suppport cheapest dongles "out of the box", which can run in AP mode.
 
-* 0bda:0179 Realtek Semiconductor Corp. RTL8188ETV Wireless LAN 802.11n Network Adapter (http://znoxx.me/cgi-bin/url.cgi?1qZe7Yl)
+* 0bda:0179 Realtek Semiconductor Corp. RTL8188ETV Wireless LAN 802.11n Network Adapter
+
+[![Realtek](docpics/rtlwifi.png)](http://znoxx.me/cgi-bin/url.cgi?1qZe7Yl)
+
 * 0bda:8179 Realtek Semiconductor Corp. RTL8188EUS 802.11n Wireless Network Adapter (http://znoxx.me/cgi-bin/rurl.cgi?1UYTCqW)
-* 148f:7601 Ralink Technology, Corp. MT7601U Wireless Adapter (http://znoxx.me/cgi-bin/rurl.cgi?1R2y3op) **NOT SUPPORTED IN RASPBERRY PI VERSIONS**
+* 148f:7601 Ralink Technology, Corp. MT7601U Wireless Adapter 
+
+[![MTK](docpics/mtkwifi.png)](http://znoxx.me/cgi-bin/rurl.cgi?1R2y3op))
+
+**NOT SUPPORTED IN RASPBERRY PI VERSIONS**
+
 * Onboard Raspberry Pi 3 Wifi (Broadcom)
 * Onboard Orange Pi Zero (AllWinner ?)
 
