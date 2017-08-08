@@ -6,7 +6,7 @@
 
 **NOTE:
 
-Project is no more supported. Heading to a whole new version
+Project is no more supported. Heading to a whole new version.
 
 # Changes for 05-03-2017
 
