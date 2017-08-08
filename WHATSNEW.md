@@ -1,3 +1,13 @@
+# Changes for 08-08-2017
+
+* Russian documentation moved to git repository
+* Added some images
+* English and Russian versions are aligned (well, almost).
+
+**NOTE:
+
+Project is no more supported. Heading to a whole new version
+
 # Changes for 05-03-2017
 
 * Overall speedup of installer due to optimization of repository processing.
