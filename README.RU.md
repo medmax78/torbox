@@ -92,11 +92,16 @@ _Различные производители интерпретируют ра
 Система поддерживает самые доступные и популярные адаптеры
 
 * 0bda:0179 Realtek Semiconductor Corp. RTL8188ETV Wireless LAN 802.11n Network Adapter
+
 [![Realtek](http://znoxx.me/content/images/2016/03/rtlwifi-1.jpg)](http://znoxx.me/cgi-bin/url.cgi?1qZe7Yl)
+
 * 0bda:8179 Realtek Semiconductor Corp. [RTL8188EUS](http://znoxx.me/cgi-bin/rurl.cgi?1UYTCqW) 802.11n Wireless Network Adapter 
-* 148f:7601 Ralink Technology, Corp. MT7601U Wireless Adapter 
+* 148f:7601 Ralink Technology, Corp. MT7601U Wireless Adapter
+
 [![MTK](http://znoxx.me/content/images/2016/03/mtkwifi.jpg)](http://znoxx.me/cgi-bin/rurl.cgi?1R2y3op)
+
 **НЕ ПОДДЕРЖИВАЕТСЯ В RASPBERRY PI (все версии) И ORANGE PI ZERO**
+
 * Собственный адаптер Raspberry Pi 3
 * Собственный адаптер в OrangePi Zero
 
