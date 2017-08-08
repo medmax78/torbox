@@ -33,44 +33,7 @@
 | Raspberry Pi 2 (armv7) | raspberrypi2 | Поддержаны только адаптеры Realtek |
 | Raspberry Pi 3 (в режиме armv7) | raspberrypi3 | Поддержаны только собственный адаптер Broadcom, т.е. внешний донгл не требуется. |
 
-<table border=1>
-  <tr>
-    <th>Плата</th>
-    <th>Название Hardware Target</th>
-    <th>Примечания</th>
-  </tr>
-  <tr>
-    <td>Orange Pi PC</td>
-    <td>orangepipc</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Orange Pi One</td>
-    <td>orangepipc</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Orange Pi Zero</td>
-    <td>orangepi0</td>
-    <td>Поддержан только встроенный WiFi адаптер</td>
-  </tr>
-  <tr>
-    <td>Raspberry Pi 1 (armv6)</td>
-    <td>raspberrypi1</td>
-    <td>Поддержаны только адаптеры Realtek</td>
-  </tr>
-<tr>
-    <td>Raspberry Pi 2 (armv7)</td>
-    <td>raspberrypi2</td>
-    <td>Поддержаны только адаптеры Realtek</td>
-  </tr>
-<tr>
-    <td>Raspberry Pi 3 (в режиме armv7)</td>
-    <td>raspberrypi3</td>
-    <td>Поддержаны только собственный адаптер Broadcom, т.е. внешний донгл не требуется.</td>
-  </tr>
 
-</table>
 
 ## Аппаратные требования
 ### Подготовка образа
@@ -108,7 +71,7 @@ _Различные производители интерпретируют ра
 
 Этот образ изначально настроен для Orange Pi PC. Если вы используете Orange Pi One - эту операцию __нужно__ сделать.
 
-[![Orange Pi PC](/content/images/2016/03/orangepipc.jpg)](http://znoxx.me/cgi-bin/url.cgi?1NS4Fcm)
+[![Orange Pi PC](http://znoxx.me/content/images/2016/03/orangepipc.jpg)](http://znoxx.me/cgi-bin/url.cgi?1NS4Fcm)
 
 ##### Для OrangePi Zero и Raspberry Pi 1-3 
 Дополнительных действий с образом не требуется - можно загружать систему.
@@ -129,10 +92,10 @@ _Различные производители интерпретируют ра
 Система поддерживает самые доступные и популярные адаптеры
 
 * 0bda:0179 Realtek Semiconductor Corp. RTL8188ETV Wireless LAN 802.11n Network Adapter
-[![Realtek](/content/images/2016/03/rtlwifi-1.jpg)](http://znoxx.me/cgi-bin/url.cgi?1qZe7Yl)
+[![Realtek](http://znoxx.me/content/images/2016/03/rtlwifi-1.jpg)](http://znoxx.me/cgi-bin/url.cgi?1qZe7Yl)
 * 0bda:8179 Realtek Semiconductor Corp. [RTL8188EUS](http://znoxx.me/cgi-bin/rurl.cgi?1UYTCqW) 802.11n Wireless Network Adapter 
 * 148f:7601 Ralink Technology, Corp. MT7601U Wireless Adapter 
-[![MTK](/content/images/2016/03/mtkwifi.jpg)](http://znoxx.me/cgi-bin/rurl.cgi?1R2y3op) **НЕ ПОДДЕРЖИВАЕТСЯ В RASPBERRY PI (все версии) И ORANGE PI ZERO**
+[![MTK](http://znoxx.me/content/images/2016/03/mtkwifi.jpg)](http://znoxx.me/cgi-bin/rurl.cgi?1R2y3op) **НЕ ПОДДЕРЖИВАЕТСЯ В RASPBERRY PI (все версии) И ORANGE PI ZERO**
 * Собственный адаптер Raspberry Pi 3
 * Собственный адаптер в OrangePi Zero
 
