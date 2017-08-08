@@ -100,7 +100,9 @@ _Различные производители интерпретируют ра
 
 [![MTK](docpics/mtkwifi.png)](http://znoxx.me/cgi-bin/rurl.cgi?1R2y3op)
 
-**НЕ ПОДДЕРЖИВАЕТСЯ В RASPBERRY PI (все версии) И ORANGE PI ZERO**
+**MTK НЕ ПОДДЕРЖИВАЕТСЯ В RASPBERRY PI (все версии) И ORANGE PI ZERO**
+
+Также поддержаны:
 
 * Собственный адаптер Raspberry Pi 3
 * Собственный адаптер в OrangePi Zero
