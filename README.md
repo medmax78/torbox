@@ -49,17 +49,13 @@ _Different manufacturers use diffrent "2GB" size interpretation. In case you rec
 Prepared image can be downloaded here:
 ##### For Orange Pi PC and Orange Pi One
 
-Mount first VFAT partition (or just re-insert card in Windows) to change script.bin according to your board.
-
-This image is set up for  Orange Pi PC. If you plan to use Orange Pi One - you __must__ do this operation.
-
-[![Orange Pi PC](docpics/orangepipc.png)](http://znoxx.me/cgi-bin/url.cgi?1NS4Fcm)
+Located [here](http://znoxx.me/cgi-bin/url.cgi?2jjcGns)
 
 ##### For Orange Pi Zero
-http://znoxx.me/cgi-bin/url.cgi?2j55knh
+Located [here](http://znoxx.me/cgi-bin/url.cgi?2j55knh)
 
 ##### For Raspberry Pi 1, Raspberry Pi 2 and Raspberry Pi 3
-http://znoxx.me/cgi-bin/url.cgi?2jjfwJb
+Located [here](http://znoxx.me/cgi-bin/url.cgi?2jjfwJb)
 
 Unpack it and "dd" to your microSD. Or use Win32DiskImager to write unpacked image on
 Windows-based systems.
@@ -68,6 +64,8 @@ Mount first VFAT partition (or just re-insert your card on Windows) and copy you
 hardware-script.bin to script.bin.
 
 Initial image is targeted for Orange Pi PC. If you want to use it with Orange Pi One, you __have to__ do this. 
+
+[![Orange Pi PC](docpics/orangepipc.png)](http://znoxx.me/cgi-bin/url.cgi?1NS4Fcm)
 
 ##### For Raspberry Pi 1,2,3 and Orange Pi Zero
 No additional actions needed - just boot your device
@@ -110,7 +108,7 @@ Boot in your freshly prepared SD-card.
 
 Login for OrangePI is orangepi/orangepi, for Raspberry Pi - pi/raspberry.
 
-Login via ssh and run following commands:
+Login via SSH and run following commands:
 
 * `sudo apt-get update`
 * `sudo apt-get install git`
