@@ -8,7 +8,7 @@ access .i2p sites. In this case you have to setup http-proxy on your device.
 
 End-user devices ( Access Point clients) do not need TOR bundle to be installed - they work fully transparent via your new Access Point.
 
-[Russian Description/Описание на русском](http://znoxx.me/tor-i2p-middlebox/)
+[Russian Description/Описание на русском](README.RU.md)
 
 ## System requirements
 Current version is targeted for some OrangePI H3 hardware (Orange Pi PC, Orange Pi One), Raspberry Pi 1,2 and 3 hardware and assumes the following:
