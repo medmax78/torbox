@@ -94,9 +94,11 @@ I decided to suppport cheapest dongles "out of the box", which can run in AP mod
 * 0bda:8179 Realtek Semiconductor Corp. RTL8188EUS 802.11n Wireless Network Adapter (http://znoxx.me/cgi-bin/rurl.cgi?1UYTCqW)
 * 148f:7601 Ralink Technology, Corp. MT7601U Wireless Adapter 
 
-[![MTK](docpics/mtkwifi.png)](http://znoxx.me/cgi-bin/rurl.cgi?1R2y3op))
+[![MTK](docpics/mtkwifi.png)](http://znoxx.me/cgi-bin/rurl.cgi?1R2y3op)
 
-**NOT SUPPORTED IN RASPBERRY PI VERSIONS**
+**MTK IS NOT SUPPORTED IN RASPBERRY PI VERSIONS**
+
+Also supported: 
 
 * Onboard Raspberry Pi 3 Wifi (Broadcom)
 * Onboard Orange Pi Zero (AllWinner ?)
