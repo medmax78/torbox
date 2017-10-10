@@ -1,4 +1,7 @@
 #  Orange TorBOX
+
+**Project is not maintained anymore. Please switch to [TorBOX Next Generation](https://github.com/znoxx/tbng)**
+
 This project is a  set of installer scripts, which will allow to setup
 anonymizing TOR middlebox and I2p proxy quickly and easily.
 

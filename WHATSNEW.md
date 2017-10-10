@@ -1,3 +1,7 @@
+# Changes for 10-10-2017
+
+**Project is not maintained anymore. Please switch to [TorBOX Next Generation](https://github.com/znoxx/tbng)**
+
 # Changes for 08-08-2017
 
 * Russian documentation moved to git repository

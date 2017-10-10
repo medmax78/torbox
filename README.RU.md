@@ -1,5 +1,7 @@
 # Orange TorBOX
 
+**Проект заморожен. Пожалуйста, переходите на [TorBOX Next Generation](https://github.com/znoxx/tbng)**
+
 Этот проект - набор скриптов, который позволит установить и настроить анонимизирующий TOR/I2P MidlleBox быстро и просто.
 
 [Файлы проекта на GitHUB](http://github.com/znoxx/torbox).
